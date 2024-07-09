@@ -4,3 +4,4 @@ body { font-family: 'Arial', sans-serif; text-align: center; background: linear-
 #newHaikuBtn:hover, #prevHaikuBtn:hover { background-color: #0056b3; }
 #haikuContainer { background-color: #fafafa; padding: 20px; border-radius: 8px; box-shadow: 0 3px 6px rgba(0,0,0,0.2); }
 #haiku { font-family: 'Georgia', serif; font-size: 26px; line-height: 1.8; color: #555; }
+#haiku { transition: opacity 0.5s ease-in-out; }
