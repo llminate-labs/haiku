@@ -7,13 +7,21 @@ const haikus = [
 let currentIndex = 0;
 
 document.getElementById('newHaikuBtn').addEventListener('click', function() {
-  if (currentIndex < haikums.length - 1) { currentIndex++; }
+  if (currentIndex < haikus.length - 1) { currentIndex++; }
   else { currentIndex = 0; }
-  document.getElementById('haiku').innerHTML = haikus[currentIndex];
+  document.getElementById('haiku').style.opacity = 0;
+  setTimeout(function() {
+    document.getElementById('haiku').innerHTML = haikus[currentIndex];
+    document.getElementById('haiku').style.opacity = 1;
+  }, 500);
 });
 
 document.getElementById('prevHaikuBtn').addEventListener('click', function() {
   if (currentIndex > 0) { currentIndex--; }
   else { currentIndex = haikus.length - 1; }
-  document.getElementById('haiku').innerHTML = haikus[currentIndex];
+  document.getElementById('haiku').style.opacity = 0;
+  setTimeout(function() {
+    document.getElementById('haiku').innerHTML = haikus[currentIndex];
+    document.getElementById('haiku').style.opacity = 1;
+  }, 500);
 });
