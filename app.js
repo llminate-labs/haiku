@@ -1,1 +1,1 @@
-document.addEventListener('DOMContentLoaded', function() { console.log('Haiku ready on display.'); });
+document.addEventListener('DOMContentLoaded', function() { console.log('Website loaded successfully.'); });
