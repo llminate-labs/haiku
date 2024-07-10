@@ -17,3 +17,16 @@ jobs:
       with:
         name: screenshots
         path: screenshots/
+    - name: Comment with image
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const fs = require('fs');
+          console.log(context);
+          const base64 = fs.readFileSync('encoded_image.txt', 'utf8');
+          github.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: `![Generated Image](data:image/png;base64,${base64})`
+          });
