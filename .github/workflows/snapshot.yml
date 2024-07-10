@@ -33,4 +33,4 @@ jobs:
               repo: context.repo.repo,
               body: `![Generated Image](data:image/png;base64,${base64})`
             });
-          })
+          }));
