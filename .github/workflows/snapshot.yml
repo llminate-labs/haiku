@@ -1,6 +1,5 @@
 name: Haiku Snapshot
-on:
-  pull_request: write
+on: [push, pull_request]
 jobs:
   take-screenshot:
     runs-on: ubuntu-latest
