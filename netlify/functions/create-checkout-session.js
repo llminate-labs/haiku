@@ -11,12 +11,16 @@ exports.handler = async (event, context) => {
 
   try {
     const { items, currency } = JSON.parse(event.body);
+    // Sanitize input to prevent XSS and SQL injection
+    const sanitizedItems = items.map(item => ({ id: String(item.id).replace(/[^\w\s]/gi, '') }));
+    const sanitizedCurrency = String(currency).replace(/[^a-zA-Z]/g, '');
+
     const host = event.headers.host;
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
-      line_items: items.map(item => ({
+      line_items: sanitizedItems.map(item => ({
         price_data: {
-          currency: currency,
+          currency: sanitizedCurrency,
           product_data: {
             name: item.id
           },
