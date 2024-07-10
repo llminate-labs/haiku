@@ -1,4 +1,9 @@
 document.getElementById('buyHaikuBtn').addEventListener('click', function() {
-  alert('Proceed to payment gateway.');
-  // Here you would typically integrate a payment gateway
+  // Simulate a payment gateway integration
+  const paymentConfirmed = confirm('Do you want to proceed with the payment?');
+  if (paymentConfirmed) {
+    alert('Payment successful! Thank you for your purchase.');
+  } else {
+    alert('Payment cancelled.');
+  }
 });
