@@ -22,7 +22,8 @@ jobs:
       with:
         script: |
           const fs = require('fs');
-          console.log(context);
+          const dir = fs.readDirSync(process.env.GITHUB_WORKSPACE, 'utf8');
+          console.log(context, dir);
           const base64 = fs.readFileSync('encoded_image.txt', 'utf8');
           github.issues.createComment({
             issue_number: context.issue.number,
