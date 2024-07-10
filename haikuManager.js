@@ -13,7 +13,14 @@ function updateHaiku() {
   setTimeout(function() {
     document.getElementById('haiku').innerHTML = haikus[currentIndex];
     document.getElementById('haiku').style.opacity = 1;
+    updateBackground();
   }, 500);
+}
+
+function updateBackground() {
+  const themeMap = { 0: 'spring', 1: 'winter', 2: 'morning' };
+  const currentTheme = themeMap[currentIndex];
+  document.documentElement.setAttribute('data-theme', currentTheme);
 }
 
 function startRotation() {
