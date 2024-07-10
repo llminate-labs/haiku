@@ -7,9 +7,9 @@ body { font-family: 'Montserrat', sans-serif; text-align: center; background: li
 @media (max-width: 600px) { .container { width: 98%; padding: 25px; } #newHaikuBtn, #prevHaikuBtn { font-size: 16px; padding: 10px 24px; } }
 
 /* Dynamic Background Changes */
-html[data-theme='spring'] { background: linear-gradient(to top, #ffecd2, #fcb69f); }
-html[data-theme='winter'] { background: linear-gradient(to top, #89f7fe, #66a6ff); }
-html[data-theme='morning'] { background: linear-gradient(to top, #fbc2eb, #a6c1ee); }
+html[data-theme='spring'] { background: linear-gradient(to top, #ffecd2 0%, #ffadd8 100%); }
+html[data-theme='winter'] { background: linear-gradient(to top, #91e5f6 0%, #f2fcfe 100%); }
+html[data-deserializer='morning'] { background: linear-gradient(to top, #fde8c8 0%, #fad0c4 100%); }
 #haiku { font-family: 'Merriweather', serif; font-size: 28px; font-weight: 400; color: #2c3e50; }
 #haikuContainer { transition: background-color 0.5s ease, boxShadow 0.5s ease; }
 /* Enhance button aesthetics */
