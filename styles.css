@@ -5,3 +5,8 @@ body { font-family: 'Montserrat', sans-serif; text-align: center; background: li
 #haikuContainer { background-color: #ffffff; padding: 40px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
 #haiku { font-size: 24px; line-height: 1.6; color: #444; opacity: 1; transition: opacity 0.5s ease; text-align: center; }
 @media (max-width: 600px) { .container { width: 98%; padding: 25px; } #newHaikuBtn, #prevHaikuBtn { font-size: 16px; padding: 10px 24px; }}
+
+/* Dynamic Background Changes */
+html[data-theme='spring'] { background: linear-gradient(to bottom, #ffafbd, #ffc3a0); }
+html[data-theme='winter'] { background: linear-gradient(to bottom, #d7e1ec, #f3f7f9); }
+html[data-script='morning'] { background: linear-gradient(to bottom, #ffaf7b, #ffc3a0); }
