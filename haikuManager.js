@@ -14,7 +14,7 @@ let haikuInterval;
 function updateHaiku() {
   document.getElementById('haiku').style.opacity = 0;
   setTimeout(function() {
-    document.getElementById('haiku').innerHTML = haikus[currentIndex];
+    document.getElementById('haiku').innerHTML = haikus[currentIndex].replace(/'/g, "'");
     document.getElementById('haiku').style.opacity = 1;
     updateBackground();
   }, 500);
@@ -43,7 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.getElementById('newHaikuBtn').addEventListener('click', incrementHaikuIndex);
 document.getElementById('prevHaikuBtn').addEventListener('click', decrementHaikuIndex);
-
 document.addEventListener('keydown', function(event) {
   if (event.key === 'ArrowRight') {
     incrementHaikuIndex();
