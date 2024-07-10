@@ -1,12 +1,17 @@
-body { font-family: 'Montserrat', sans-serif; text-align: center; color: #233; height: 100vh; display: flex; align-items: center; justify-content: center; background: #f4f4f9; }
-.container { width: 90%; max-width: 1200px; background: #ffffff; padding: 40px; box-shadow: 0 12px 24px rgba(0,0,0,0.1); border-radius: 25px; }
-#newHaikuBtn, #prevHaikuBtn, #buyHaikuBtn { margin-top: 25px; padding: 20px 40px; font-size: 20px; color: #fff; background-color: #007bb6; border: none; border-radius: 18px; cursor: pointer; transition: background-color 0.3s; outline: none; }
+body { font-family: 'Montserrat', sans-serif; text-align: center; color: #233; height: 100vh; display: flex; align-items: center; justify-content: center; background: none; }
+.container { width: 90%; max-width: 1000px; background: white; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-radius: 20px; }
+#newHaikuBtn, #prevHaikuBtn, #buyHaikuBtn { margin-top: 20px; padding: 15px 35px; font-size: 18px; color: #333; background-color: #007bb6; border: none; border-radius: 12px; cursor: pointer; transition: background-color 0.3s; outline: none; }
 #newHaikuBtn:hover, #prevHaikuBtn:hover, #buyHaikuBtn:hover { background-color: #005f87; }
-#haikuContainer { background-color: #f8f9fa; padding: 25px; border-radius: 18px; box-shadow: 0 6px 16px rgba(0,0,0,0.15); }
-#haiku { font-size: 28px; line-height: 1.65; color: #333; transition: opacity 0.5s ease; text-align: center; }
-@media (max-width: 600px) { .container { width: 98%; padding: 30px; } #newHaikuBtn, #prevHaikuBtn, #buyHaikuBtn { font-size: 18px; padding: 15px 30px; } }
+#haikuContainer { background-color: #ffffff; padding: 20px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+#haiku { font-size: 24px; line-height: 1.6; color: #444; opacity: 1; transition: opacity 0.5s ease; text-align: center; }
+@media (max-width: 600px) { .container { width: 98%; padding: 25px; } #newHaikuBtn, #prevHaikuBtn, #buyHaikuBtn { font-size: 16px; padding: 10px 24px; } }
 
 /* Dynamic Background Changes */
-html[data-theme='spring'] { background: linear-gradient(to top, #f9d3c6 0%, #f6edfa 100%); }
-html[data-theme='winter'] { background: linear-gradient(to top, #dae2f8 0%, #d6a4a4 100%); }
-html[data...
+html[data-theme='spring'] { background: linear-gradient(to top, #ffecd2 0%, #ffadd8 100%); }
+html[data-theme='winter'] { background: linear-gradient(to top, #91e5f6 0%, #f2fcfe 100%); }
+html[data-theme='morning'] { background: linear-gradient(to top, #fde8c8 0%, #fad0c4 100%); }
+#haiku { font-family: 'Merriweather', serif; font-size: 28px; font-weight: 400; color: #2c3e50; }
+#haikuContainer { transition: background-color 0.5s ease, boxShadow 0.5s ease; }
+/* Enhance button aesthetics */
+#newHaikuBtn, #prevHaikuBtn, #buyHaikuBtn { background-color: #3498db; border-radius: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: all 0.3s ease; }
+#newHaikuBtn:hover, #prevHaikuBtn:hover, #buyHaikuBtn:hover { background-color: #2980b9; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
