@@ -1,7 +1,7 @@
-body { font-family: 'Montserrat', sans-serif; text-align: center; background: linear-gradient(to bottom, #e0eafc, #cfdef3); color: #333; height: 100vh; display: flex; align-items: center; justify-content: center; }
-.container { width: 90%; max-width: 800px; background: white; padding: 3rem; box-shadow: 0 10px 20px rgba(0,0,0,0.2); border-radius: 20px; }
-#newHaikuBtn, #prevHaikuBtn { margin-top: 30px; padding: 15px 30px; font-size: 20px; color: #fff; background-color: #00bcd4; border: none; border-radius: 10px; cursor: pointer; }
-#newHaikuBlcppn:hover, #prevHaikuBtn:hover { background-color: #0097a7; }
-#haikuContainer { background-color: #f6f6ff; padding: 40px; border-radius: 15px; }
-#haiku { font-family: 'Open Sans', serif; font-size: 28px; line-height: 1.75; color: #444; opacity: 0; transition: opacity 0.8s ease-in-out; text-align: justify; }
-@media (max-width: 600px) { .container { width: 95%; padding: 2rem; } #newHaikuBtn, #prevHaikuBtn { font-size: 18px; padding: 10px 24px; }}
+body { font-family: 'Montserrat', sans-serif; text-align: center; background: linear-gradient(to bottom, #fafafa, #eaeaea); color: #233; height: 100vh; display: flex; align-items: center; justify-content: center; }
+.container { width: 90%; max-width: 1000px; background: white; padding: 4rem; box-shadow: 0 15px 25px rgba(0,0,0,0.1); border-radius: 25px; }
+#newHaikuBtn, #prevHaikuBtn { margin-top: 40px; padding: 20px 40px; font-size: 22px; color: #fff; background-color: #007bb6; border: none; border-radius: 15px; cursor: pointer; transition: background-color 0.3s; }
+#newHaikuBtn:hover, #prevHaikuBtn:hover { background-color: #005f87; }
+#haikuContainer { background-color: #f0f0ff; padding: 50px; border-radius: 20px; }
+#haiku { font-family: 'Open Sans', serif; font-size: 30px; line-height: 1.9; color: #444; opacity: 0; transition: opacity 0.5s ease-in-out; text-align: justify; }
+@media (max-width: 600px) { .container { width: 98%; padding: 2.5rem; } #newHaikuBtn, #prevHaikuBtn { font-size: 20px; padding: 15px 28px; }}
