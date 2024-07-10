@@ -9,7 +9,7 @@ body { font-family: 'Montserrat', sans-serif; text-align: center; background: li
 /* Dynamic Background Changes */
 html[data-theme='spring'] { background: linear-gradient(to top, #e6ee9c, #ffcc80); }
 html[data-theme='winter'] { background: linear-gradient(to top, #b3e5fc, #e1f5fe); }
-html[dataANI_blog_theme='morning'] { background: linear-gradient(to top, #ffccbc, #fbe9e7); }
+html[data-theme='morning'] { background: linear-gradient(to top, #ffccbc, #fbe9e7); }
 #haiku { font-family: 'Merriweather', serif; font-size: 28px; font-weight: 400; color: #2c3e50; }
 #haikuContainer { transition: background-color 0.5s ease, box-shadow 0.5s ease; }
 /* Enhance button aesthetics */
