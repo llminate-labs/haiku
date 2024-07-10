@@ -13,9 +13,7 @@ document.getElementById('buyHaikuBtn').addEventListener('click', async function(
       },
       body: JSON.stringify({
         items: [{ id: 'haiku1' }],
-        currency: 'usd',
-        success_url: '/success',
-        cancel_url: '/cancel'
+        currency: 'usd'
       })
     }).then(res => res.json());
 
