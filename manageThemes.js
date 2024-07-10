@@ -1,1 +1,0 @@
-document.documentElement.setAttribute('data-theme', 'spring'); // Automatically assume spring theme on start
