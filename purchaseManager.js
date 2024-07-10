@@ -1,8 +1,7 @@
-// Import Stripe.js
-import { loadStripe } from '@stripe/stripe-js';
+// Stripe.js is assumed to be included in the HTML
 
 // Initialize Stripe with your public key
-const stripe = loadStripe('your-public-key');
+const stripe = Stripe('your-public-key');
 
 document.getElementById('buyHaikuBtn').addEventListener('click', async function() {
   try {
