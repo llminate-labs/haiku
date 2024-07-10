@@ -12,3 +12,8 @@ jobs:
         ACTIONS_ALLOW_UNSECURE_COMMANDS: true
       with:
         url: 'https://llminate-labs.github.io/haiku/'
+    - name: Upload screenshots
+      uses: actions/upload-artifact@v3
+      with:
+        name: screenshots
+        path: screenshots/
