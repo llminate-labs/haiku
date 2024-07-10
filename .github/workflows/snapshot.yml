@@ -24,7 +24,7 @@ jobs:
           const fs = require('fs');
           const path = require('path');
           const screenshots = fs.readdirSync(path.join(process.env.GITHUB_WORKSPACE, 'screenshots'), 'utf8');
-          console.log(context, screenshots);
+          console.log(context, screenshots, github);
           return Promise.all(screenshots.map(screenshot => {
             const base64 = fs.readFileSync(path.join(process.env.GITHUB_WORKSPACE, 'screenshots', screenshot), 'utf8');
             return github.issues.createComment({
