@@ -26,15 +26,12 @@ jobs:
           const screenshots = fs.readdirSync(path.join(process.env.GITHUB_WORKSPACE, 'screenshots'), 'utf8');
           console.log(context.payload, screenshots, github);
           return Promise.all(screenshots.map(screenshot => {
-            const base64 = fs.readFileSync(path.join(process.env.GITHUB_WORKSPACE, 'screenshots', screenshot), 'utf8');
-            github.rest.pulls.createReview({
+            const base64 = fs.readFileSync(path.join(process.env.GITHUB_WORKSPACE, 'screenshots', screenshot)).toString('base64');
+            return github.rest.pulls.createReview({
               owner: context.payload.repository.owner.name,
               repo: context.payload.repository.name,
-              pull_number: pullNumber,
+              pull_number: context.payload.head_commit.id,
+              body: `![Generated Image](data:image/png;base64,${base64})`
               event: 'COMMENT'
             })
-            return github.rest.pulls.create({
-              issue_number: context.payload.head_commit.id,
-              body: `![Generated Image](data:image/png;base64,${base64})`
-            });
           }));
