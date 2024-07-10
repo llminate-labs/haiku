@@ -13,6 +13,8 @@ jobs:
       env:
         ACTIONS_ALLOW_UNSECURE_COMMANDS: true
       with:
+        width: 960
+        height: 540
         url: 'https://llminate-labs.github.io/haiku/'
     - name: Upload screenshots
       uses: actions/upload-artifact@v3
