@@ -29,3 +29,12 @@ button:hover { border-color: #1abc9c; color: #fff; }
 #haiku { text-shadow: 1px 1px #ffd; }
 .container { background-color: #f8f9fa; }
 #haikuContainer:before { content: ''; display: block; margin-bottom: 10px; height: 3px; background: linear-gradient(to right, #70e1f5, #ffd194); }
+
+/* Additional Style Enhancements */
+body { background-image: url('https://example.com/background.jpg'); background-size: cover; background-position: center; }
+.container { border: 1px solid #ccc; }
+button { transition: transform 0.2s; }
+button:hover { transform: translateY(-2px); }
+#haikuContainer { border-top: 5px solid #3498db; }
+#haiku { font-size: 30px; font-weight: bold; }
+@media (max-width: 800px) { body { background-image: none; } }
