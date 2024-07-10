@@ -15,11 +15,11 @@
   <div class='container'>
     <h1>Welcome to Our Enhanced Haiku Gallery</h1>
     <p>Use ← and → keys or the buttons below to navigate through the haikus, or just wait for the automatic transition.</p>
-    <button id='prevHaikuBtn'>Previous Haiku</button>
-    <button id='newHaikuBtn'>Next Haiku</button>
-    <div id='haikuContainer'>
-      <p id='haiku'>Loading Haikus...</p>
-      <button id='buyHaikuBtn'>Buy This Haiku</button>
+    <button id='prevHaikuBtn' role='button' tabindex='0'>Previous Haiku</button>
+    <button id='newHaikuBtn' role='button' tabindex='0'>Next Haiku</button>
+    <div id='haikuContainer' role='region' aria-live='polite'>
+      <p id='haiku' tabindex='0'>Loading Haikus...</p>
+      <button id='buyHaikuBtn' role='button' tabindex='0'>Buy This Haiku</button>
     </div>
   </div>
   <script src='haikuManager.js' defer></script>
