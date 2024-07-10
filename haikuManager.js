@@ -31,6 +31,9 @@ document.addEventListener('DOMContentLoaded', function() {
   if (autoRotate) startRotation();
 });
 
+document.getElementById('newHaikuBtn').addEventListener('click', incrementHaikuIndex);
+document.getElementById('prevHaikuBtn').addEventListener('click', decrementHaikuIndex);
+
 document.addEventListener('keydown', function(event) {
   if (event.key === 'ArrowRight') {
     incrementHaikuIndex();
@@ -39,32 +42,6 @@ document.addEventListener('keydown', function(event) {
     decrementHaikuIndex();
   }
 });
-
-document.addEventListener('touchstart', handleTouchStart, false);
-document.addEventListener('touchmove', handleTouchMove, false);
-
-let xDown = null;
-
-function handleTouchStart(evt) {
-  const firstTouch = evt.touches[0];
-  xDown = firstTouch.clientX;
-}
-
-function handleTouchMove(evt) {
-  if (!xDown) {
-    return;
-  }
-
-  let xUp = evt.touches[0].clientX;
-  let xDiff = xDown - xUp;
-
-  if (xDiff > 0) {
-    incrementHaikuIndex();
-  } else {
-    decrementHaikuIndex();
-  }
-  xDown = null;
-}
 
 function incrementHaikuIndex() {
   stopRotation();
