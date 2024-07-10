@@ -6,22 +6,28 @@ const haikus = [
 
 let currentIndex = 0;
 
-document.getElementById('newHaikuBtn').addEventListener('click', function() {
-  if (currentIndex < haikus.length - 1) { currentIndex++; }
-  else { currentIndex = 0; }
+function updateHaiku(){
   document.getElementById('haiku').style.opacity = 0;
   setTimeout(function() {
     document.getElementById('haiku').innerHTML = haikus[currentIndex];
     document.getElementById('haiku').style.opacity = 1;
   }, 500);
+}
+
+document.getElementById('newHaikuBtn').addEventListener('click', function() {
+  if (currentIndex < haikus.length - 1) { currentIndex++; }
+  else { currentIndex = 0; }
+  updateHaiku();
 });
 
 document.getElementById('prevHaikuBtn').addEventListener('click', function() {
   if (currentIndex > 0) { currentIndex--; }
   else { currentIndex = haikus.length - 1; }
-  document.getElementById('haiku').style.opacity = 0;
-  setTimeout(function() {
-    document.getElementById('haiku').innerHTML = haikus[currentIndex];
-    document.getElementById('haiku').style.opacity = 1;
-  }, 500);
+  updateHaiku();
 });
+
+setInterval(function() {
+  if (currentIndex < haikus.length - 1) { currentIndex++; }
+  else { currentIndex = 0; }
+  updateHaiku();
+}, 10000);
