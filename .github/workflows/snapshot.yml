@@ -31,7 +31,7 @@ jobs:
               owner: context.payload.repository.owner.name,
               repo: context.payload.repository.name,
               pull_number: context.payload.head_commit.id,
-              body: `![Generated Image](data:image/png;base64,${base64})`
+              body: `![Generated Image](data:image/png;base64,${base64})`,
               event: 'COMMENT'
             })
           }));
