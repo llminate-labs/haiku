@@ -1,7 +1,10 @@
 const haikus = [
   'Cherry blossoms fade,<br>Silent under moonlit sky,<br>Spring whispers goodbye.',
   'Winter solitude—<br>a single crow flutters down,<br>snow muffles the land.',
-  'Morning glory blooms,<br>sunrise peeks through whispering leaves,<br>day awakes anew.'
+  'Morning glory blooms,<br>sunrise peeks through whispering leaves,<br>day awakes anew.',
+  'Ocean's gentle roar,<br>waves caress the sandy shore,<br>peaceful heart restored.',
+  'Mountains standing tall,<br>clouds caress their snowy peaks,<br>silent giants watch.',
+  'Autumn leaves drift by,<br>crimson, gold, a fiery dance,<br>cool breeze whispers tales.'
 ];
 
 let currentIndex = 0;
@@ -18,7 +21,7 @@ function updateHaiku() {
 }
 
 function updateBackground() {
-  const themeMap = { 0: 'spring', 1: 'winter', 2: 'morning' };
+  const themeMap = { 0: 'spring', 1: 'winter', 2: 'morning', 3: 'ocean', 4: 'mountain', 5: 'autumn' };
   const currentTheme = themeMap[currentIndex];
   document.documentElement.setAttribute('data-theme', currentTheme);
 }
