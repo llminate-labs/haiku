@@ -1,7 +1,7 @@
 // Stripe.js is assumed to be included in the HTML
 
 // Initialize Stripe with your public key
-const stripe = Stripe('your-public-key');
+const stripe = Stripe('pk_test_51Pb9NOLZgqEfYlW4o8CrZyF3h4hPSHkrgokgOj46kGOifWzfiNYS7Og6DfRFPsbkpIcA3uVcDotxDWyFesmlfIC200gq1yTISs');
 
 document.getElementById('buyHaikuBtn').addEventListener('click', async function() {
   try {
