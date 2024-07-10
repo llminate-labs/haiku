@@ -37,7 +37,7 @@ function decrementHaikuIndex() {
 
 document.getElementById('newHaikuBtn').addEventListener('click', incrementHaikuIndex);
 
-document.getElementById('prevHaikuBtn').addEventListener('click', decrementHaikuSize);
+document.getElementById('prevHaikuBtn').addEventListener('click', decrementHaikuIndex);
 
 setInterval(function() {
   incrementHaikuIndex();
