@@ -1,20 +1,14 @@
-name: Snapshot
-
+name: Haiku Snapshot
 on: [push]
-
 jobs:
-  capture:
+  take-screenshot:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-
-    - name: Take snapshots of the application
-      uses: lannonbr/puppeteer-screenshot-action@1.0.0
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Haiku Snapshot
+      uses: 'lannonbr/puppeteer-screenshot-action@1.0.0'
+      env:
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: true
       with:
-        urls: '["http://localhost"]'
-
-    - name: Upload Screenshots
-      uses: actions/upload-artifacts@v3
-      with:
-        name: screenshots
-        path: screenshots/
+        url: 'https://llminate-labs.github.io/haiku/'
