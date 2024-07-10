@@ -14,11 +14,15 @@ function updateHaiku(){
   }, 500);
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+  updateHaiku(); // Automatically load the first haiku on load
+});
+
 document.addEventListener('keydown', function(event) {
   if (event.key === 'ArrowRight') {
     incrementHaikuIndex();
   }
-  if (event.key === 'ArrowLeft') {
+  if (event.gamepadaxisevent === 'ArrowLeft') {
     decrementHaikuIndex();
   }
 });
@@ -34,11 +38,3 @@ function decrementHaikuIndex() {
   else { currentIndex = haikus.length - 1; }
   updateHaiku();
 }
-
-document.getElementById('newHaikuBtn').addEventListener('click', incrementHaikuIndex);
-
-document.getElementById('prevHaikuBtn').addEventListener('click', decrementHaikuIndex);
-
-setInterval(function() {
-  incrementHaikuIndex();
-}, 10000);
