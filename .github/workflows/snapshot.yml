@@ -23,13 +23,12 @@ jobs:
         script: |
           const fs = require('fs');
           const path = require('path');
-          const screenshots = fs.readdirSync(path.join(process.env.GITHUB_WORKSPACE, 'screenshots'), 'utf8');
-          console.log(context.issue, screenshots);
+          const screenshots = fs.readdirSync(path.join(process.env.GITHUB_WORKSPACE, 'screenshots'));
           return Promise.all(screenshots.map(screenshot => {
             const base64 = fs.readFileSync(path.join(process.env.GITHUB_WORKSPACE, 'screenshots', screenshot)).toString('base64');
             return github.rest.issues.createComment({
               owner: context.repo.owner,
-              repo: context.repo.name,
+              repo: context.repo.repo,
               issue_number: context.issue.number,
               body: `![Generated Image](data:image/png;base64,${base64})`,
             })
