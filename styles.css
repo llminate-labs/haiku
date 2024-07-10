@@ -1,4 +1,4 @@
-body { font-family: 'Montserrat', sans-serif; text-align: center; background: linear-gradient(to bottom, #f2f6ff, #d9e4ff); color: #233; height: 100vh; display: flex; align-items: center; justify-content: center; }
+body { font-family: 'Montserrat', sans-serif; text-align: center; color: #233; height: 100vh; display: flex; align-items: center; justify-content: center; background: none; }
 .container { width: 90%; max-width: 1000px; background: white; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-radius: 20px; }
 #newHaikuBtn, #prevHaikuBtn { margin-top: 20px; padding: 15px 35px; font-size: 18px; color: #333; background-color: #007bb6; border: none; border-radius: 12px; cursor: pointer; transition: background-color 0.3s; outline: none; }
 #newHaikuBtn:hover, #prevHaikuBtn:hover { background-color: #005f87; }
