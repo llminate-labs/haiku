@@ -14,20 +14,31 @@ function updateHaiku(){
   }, 500);
 }
 
-document.getElementById('newHaikuBtn').addEventListener('click', function() {
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'ArrowRight') {
+    incrementHaikuIndex();
+  }
+  if (event.key === 'ArrowLeft') {
+    decrementHaikuIndex();
+  }
+});
+
+function incrementHaikuIndex() {
   if (currentIndex < haikus.length - 1) { currentIndex++; }
   else { currentIndex = 0; }
   updateHaiku();
-});
+}
 
-document.getElementById('prevHaikuBtn').addEventListener('click', function() {
+function decrementHaikuIndex() {
   if (currentIndex > 0) { currentIndex--; }
   else { currentIndex = haikus.length - 1; }
   updateHaiku();
-});
+}
+
+document.getElementById('newHaikuBtn').addEventListener('click', incrementHaikuIndex);
+
+document.getElementById('prevHaikuBtn').addEventListener('click', decrementHaikuSize);
 
 setInterval(function() {
-  if (currentIndex < haikus.length - 1) { currentIndex++; }
-  else { currentIndex = 0; }
-  updateHaiku();
+  incrementHaikuIndex();
 }, 10000);
