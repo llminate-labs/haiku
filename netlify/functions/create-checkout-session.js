@@ -11,6 +11,7 @@ exports.handler = async (event, context) => {
 
   try {
     const { items, currency } = JSON.parse(event.body);
+    const host = event.headers.host;
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
       line_items: items.map(item => ({
@@ -24,8 +25,8 @@ exports.handler = async (event, context) => {
         quantity: 1
       })),
       mode: 'payment',
-      success_url: '/success',
-      cancel_url: '/cancel'
+      success_url: `https://${host}/success`,
+      cancel_url: `https://${host}/cancel`
     });
 
     return {
