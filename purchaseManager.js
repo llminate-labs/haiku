@@ -6,7 +6,7 @@ const stripe = Stripe('your-public-key');
 document.getElementById('buyHaikuBtn').addEventListener('click', async function() {
   try {
     // Create a checkout session on your server
-    const session = await fetch('/create-checkout-session', {
+    const session = await fetch('/.netlify/functions/create-checkout-session', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
