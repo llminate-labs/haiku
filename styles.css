@@ -7,11 +7,11 @@ body { font-family: 'Montserrat', sans-serif; text-align: center; background: li
 @media (max-width: 600px) { .container { width: 98%; padding: 25px; } #newHaikuBtn, #prevHaikuBtn { font-size: 16px; padding: 10px 24px; } }
 
 /* Dynamic Background Changes */
-html[data-theme='spring'] { background: linear-gradient(to top, #e6ee9c, #ffcc80); }
-html[data-theme='winter'] { background: linear-gradient(to top, #b3e5fc, #e1f5fe); }
-html[data-theme='morning'] { background: linear-gradient(to top, #ffccbc, #fbe9e7); }
+html[data-theme='spring'] { background: linear-gradient(to top, #ffecd2, #fcb69f); }
+html[data-theme='winter'] { background: linear-gradient(to top, #89f7fe, #66a6ff); }
+html[data-theme='morning'] { background: linear-gradient(to top, #fbc2eb, #a6c1ee); }
 #haiku { font-family: 'Merriweather', serif; font-size: 28px; font-weight: 400; color: #2c3e50; }
-#haikuContainer { transition: background-color 0.5s ease, box-shadow 0.5s ease; }
+#haikuContainer { transition: background-color 0.5s ease, boxShadow 0.5s ease; }
 /* Enhance button aesthetics */
 #newHaikuBtn, #prevHaikuBtn { background-color: #3498db; border-radius: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: all 0.3s ease; }
 #newHaikuBtn:hover, #prevHaikuBtn:hover { background-color: #2980b9; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
