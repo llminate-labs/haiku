@@ -1,2 +1,2 @@
-#newHaikuBtn, #prevHaikuBtn, #buyHaikuBtn { background-color: #3498db; border-radius: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: all 0.3s ease; }
-#newHaikuBtn:hover, #prevHaikuBtn:hover, #buyHaikuBtn:hover { background-color: #2980b9; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+#newHaikuBtn, #prevHaikuBtn, #buyHaikuBtn { background-color: #4a69bd; border-radius: 20px; box-shadow: 0 5px 10px rgba(0,0,0,0.2); transition: all 0.4s ease; }
+#newHaikuBtn:hover, #prevHaikuBtn:hover, #buyHaikuBtn:hover { background-color: #1e3799; box-shadow: 0 8px 25px rgba(0,0,0,0.3); }
