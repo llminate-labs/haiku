@@ -34,6 +34,6 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.issue.number,
-              body: `data:image/png;base64,${base64}`,
+              body: `[Preview Image](data:image/png;base64,${base64})`,
             })
           }));
