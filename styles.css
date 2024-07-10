@@ -15,3 +15,10 @@ html[data-theme='morning'] { background: linear-gradient(to top, #fde8c8 0%, #fa
 /* Enhance button aesthetics */
 #newHaikuBtn, #prevHaikuBtn, #buyHaikuBtn { background-color: #3498db; border-radius: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: all 0.3s ease; }
 #newHaikuBtn:hover, #prevHaikuBtn:hover, #buyHaikuBtn:hover { background-color: #2980b9; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+
+/* New Style Enhancements */
+.container:hover { transform: scale(1.02); transition: transform 0.3s ease; }
+button:focus { outline: none; box-shadow: 0 0 3pt 2pt #3498db; }
+html[data-theme='spring'] { filter: brightness(1.1); }
+html[data-theme='winter'] { filter: brightness(0.9); }
+html[data-theme='morning'] { filter: saturate(1.2); }
