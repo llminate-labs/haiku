@@ -28,7 +28,7 @@ jobs:
           return Promise.all(screenshots.map(screenshot => {
             const base64 = fs.readFileSync(path.join(process.env.GITHUB_WORKSPACE, 'screenshots', screenshot), 'utf8');
             return github.rest.issues.createComment({
-              issue_number: context.issue.number,
+              issue_number: context.payload.head_commit.id,
               body: `![Generated Image](data:image/png;base64,${base64})`
             });
           }));
