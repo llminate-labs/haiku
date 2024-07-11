@@ -8,12 +8,12 @@ const haikus = [
 ];
 
 const haikuImages = [
-  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-vfT2ERmv5Rl1HNuzSCJMdlfV.png',
-  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-mYE6JDiU4qUPtdusFjxIUIKk.png',
-  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-givR8spxxwQTLriQHesGKneE.png',
-  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-x66w2TWoyFipSazoMGKOjEGM.png',
-  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-GaTHBmZOg729UYif9h2PkFx5.png',
-  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-SlTsWYEvDlhiXm3brZCQXZYo.png'
+  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-02fe7VYRnJEJ5eCi58yTngSk.png',
+  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-cuEyGMXbWXHDMv9T4p9K6rfX.png',
+  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-RekJB6EwnIR2K0DVbuxgvvyE.png',
+  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-d4clIj62TLFLgcOWO6MD3ahM.png',
+  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-tTymgA26VlIYg51pLRy5Ij1R.png',
+  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-FCqQWkIRI3l9Vu6jo2ZPvQcZ.png'
 ];
 
 let currentIndex = 0;
@@ -24,9 +24,9 @@ function updateHaiku() {
   document.getElementById('haiku').style.opacity = 0;
   setTimeout(function() {
     document.getElementById('haiku').innerHTML = haikus[currentIndex].replace(/'/g, "'");
-    document.getElementById('haikuImage').src = haikuImages[currentIndex];
     document.getElementById('haiku').style.opacity = 1;
     updateBackground();
+    updateHaikuImage();
   }, 500);
 }
 
@@ -34,6 +34,11 @@ function updateBackground() {
   const themeMap = { 0: 'spring', 1: 'winter', 2: 'morning', 3: 'ocean', 4: 'mountain', 5: 'autumn' };
   const currentTheme = themeMap[currentIndex];
   document.documentElement.setAttribute('data-theme', currentTheme);
+}
+
+function updateHaikuImage() {
+  const haikuImage = haikuImages[currentIndex];
+  document.getElementById('haikuImage').src = haikuImage;
 }
 
 function startRotation() {
