@@ -31,7 +31,7 @@ button { border: 2px solid transparent; font-weight: bold; }
 button:hover { border-color: #1abc9c; color: #fff; }
 #haiku { text-shadow: 1px 1px #ffd; }
 .container { background-color: #f8f9fa; }
-#haikuContainer:before { content: ''; display: block; margin-bottom: 10px; height: 3px; background: linear-gradient(to right, #70e1f5, #ffd194); }
+#haikuContainer:before { content: ''; display:block; margin-bottom: 10px; height: 3px; background: linear-gradient(to right, #70e1f5, #ffd194); }
 
 /* Additional Style Enhancements */
 body { background-image: url('https://example.com/background.jpg'); background-size: cover; background-position: center; }
