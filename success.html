@@ -10,6 +10,17 @@
   <div class='container'>
     <h1>Payment Successful</h1>
     <p>Thank you for your purchase! Your transaction has been completed successfully. You can return to the <a href='index.html'>homepage</a> to continue enjoying our haikus.</p>
+    <div class='haiku-display'>
+      <h2>Your Purchased Haiku</h2>
+      <p id='purchasedHaiku'>Loading...</p>
+    </div>
+    <div class='transaction-details'>
+      <h2>Transaction Details</h2>
+      <p><strong>Transaction ID:</strong> <span id='transactionId'>Loading...</span></p>
+      <p><strong>Date:</strong> <span id='transactionDate'>Loading...</span></p>
+      <p><strong>Amount:</strong> <span id='transactionAmount'>Loading...</span></p>
+    </div>
   </div>
+  <script src='successManager.js' defer></script>
 </body>
 </html>
