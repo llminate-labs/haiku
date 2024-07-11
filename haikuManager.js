@@ -10,8 +10,85 @@ const haikus = [
 const haikuImages = [
   'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-gcSQxgM5p1Ft2HpvVmWYAfAF.png?st=2024-07-11T16%3A24%3A09Z&se=2024-07-11T18%3A24%3A09Z&sp=r&sv=2023-11-03&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2024-07-11T02%3A32%3A16Z&ske=2024-07-12T02%3A32%3A16Z&sks=b&skv=2023-11-03&sig=zzuvdkSfiOwfswUo2WH5H5F1XjMwul02tPAV/G9tDBE%3D',
   'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-a0iPi5YGxHCMxnT7JIULoYab.png?st=2024-07-11T16%3A26%3A19Z&se=2024-07-11T18%3A26%3A19Z&sp=r&sv=2023-11-03&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2024-07-10T22%3A51%3A35Z&ske=2024-07-11T22%3A51%3A35Z&sks=b&skv=2023-11-03&sig=rcgnRQkKmfbSgS9Kc/uamxEuu318WJzEsOpf1rfogLs%3D',
-  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-ZMhNG2WYfFCr72KdLLpdnXjh.png?st=2024-07-11T06%3A33%3A24Z&se=2024-07-11T08%3A33%3A24Z&sp=r&sv=2023-11-03&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2024-07-11T02%3A19%3A47Z&ske=2024-07-12T02%3A19%3A47Z&sks=b&skv=2023-11-03&sig=Hu0uqdy88ATF1zJuaI3hhGtzLkB4TlHPaa8rk5lS1f0%3D',
-  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-OKAMHQqpJ85Oev7h3PAWBEW8.png?st=2024-07-11T06%3A33%3A36Z&se=2024-07-11T08%3A33%3A36Z&sp=r&sv=2023-11-03&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2024-07-11T02%3A31%3A54Z&ske=2024-07-12T02%3A31%3A54Z&sks=b&skv=2023-11-03&sig=br5hjlSdPxz4eHPPtV4%2BBuCfCLjEetzcEjdRRHiIJ8A%3D',
-  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-5PNBrSsQBOf7cvah3q5dGric.png?st=2024-07-11T06%3A33%3A46Z&se=2024-07-11T08%3A33%3A46Z&sp=r&sv=2023-11-03&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2024-07-11T02%3A30%3A02Z&ske=2024-07-12T02%3A30%3A02Z&sks=b&skv=2023-11-03&sig=GY5tJJbL0rUX3jhL0SQqwxJD26pUHGWorm/OEWB4uJs%3D',
-  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-bnjhQaiWpmaJwbxdOKKptVNT.png?st=2024-07-11T06%3A33%3A58Z&se=2024-07-11T08%3A33%3A58Z&sp=r&sv=2023-11-03&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e...  // Truncated for brevity
-]}
+  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-EtoXhJ1iXME1mQqc2BPZ0QCC.png?st=2024-07-11T16%3A27%3A49Z&se=2024-07-11T18%3A27%3A49Z&sp=r&sv=2023-11-03&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2024-07-10T23%3A55%3A34Z&ske=2024-07-11T23%3A55%3A34Z&sks=b&skv=2023-11-03&sig=oQijRwPwIujVQvkUMFvljM3HIyc2NluXrtB8ZMrumXU%3D',
+  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-UgTCLdLUVWuhi1cWpdG7HMA5.png?st=2024-07-11T16%3A27%3A58Z&se=2024-07-11T18%3A27%3A58Z&sp=r&sv=2023-11-03&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2024-07-11T02%3A21%3A09Z&ske=2024-07-12T02%3A21%3A09Z&sks=b&skv=2023-11-03&sig=qZTAaSeb1Rn6tSeQYyhyRKLpwmWWulah7/cZSQ67I4M%3D',
+  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-d0Oh17EzPeeqeiXmG440lWPu.png?st=2024-07-11T16%3A28%3A08Z&se=2024-07-11T18%3A28%3A08Z&sp=r&sv=2023-11-03&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2024-07-11T02%3A20%3A48Z&ske=2024-07-12T02%3A20%3A48Z&sks=b&skv=2023-11-03&sig=6yCSIKrBFciWZRcTRjt2trLz1YDQUT/tZgEjNIVv8Eo%3D',
+  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-AkCQ9fmBPjt6QNnTkiV3G8bi.png?st=2024-07-11T16%3A28%3A17Z&se=2024-07-11T18%3A28%3A17Z&sp=r&sv=2023-11-03&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2024-07-11T02%3A24%3A01Z&ske=2024-07-12T02%3A24%3A01Z&sks=b&skv=2023-11-03&sig=Dy2qC8RKt73iExzaBwf7r%2Bhn4MbUZOhSc4xJLPbpIJo%3D'
+];
+
+let currentIndex = 0;
+let autoRotate = true;
+let haikuInterval;
+
+function updateHaiku() {
+  document.getElementById('haiku').style.opacity = 0;
+  setTimeout(function() {
+    document.getElementById('haiku').innerHTML = haikus[currentIndex].replace(/'/g, "'");
+    document.getElementById('haiku').style.opacity = 1;
+    updateBackground();
+    updateHaikuImage();
+  }, 500);
+}
+
+function updateBackground() {
+  const themeMap = { 0: 'spring', 1: 'winter', 2: 'morning', 3: 'ocean', 4: 'mountain', 5: 'autumn' };
+  const currentTheme = themeMap[currentIndex];
+  document.documentElement.setAttribute('data-theme', currentTheme);
+}
+
+function updateHaikuImage() {
+  const haikuImage = haikuImages[currentIndex];
+  const netlifyImageUrl = `/.netlify/images?url=${encodeURIComponent(haikuImage)}`;
+  document.body.style.backgroundImage = 'url(' + netlifyImageUrl + ')';
+  document.body.style.backgroundSize = 'cover';
+  document.body.style.backgroundPosition = 'center';
+  document.body.style.transition = 'background-image 0.5s ease-in-out';
+}
+
+function startRotation() {
+  haikuInterval = setInterval(function() {
+    incrementHaikuIndex();
+  }, 5000);
+}
+
+function stopRotation() {
+  clearInterval(haikuInterval);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  updateHaiku();
+  if (autoRotate) startRotation();
+});
+
+document.getElementById('newHaikuBtn').addEventListener('click', incrementHaikuIndex);
+document.getElementById('prevHaikuBtn').addEventListener('click', decrementHaikuIndex);
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'ArrowRight') {
+    incrementHaikuIndex();
+  }
+  if (event.key === 'ArrowLeft') {
+    decrementHaikuIndex();
+  }
+});
+
+function incrementHaikuIndex() {
+  stopRotation();
+  if (currentIndex < haikus.length - 1) {
+    currentIndex++;
+  } else {
+    currentIndex = 0;
+  }
+  updateHaiku();
+  if (autoRotate) startRotation();
+}
+
+function decrementHaikuIndex() {
+  stopRotation();
+  if (currentIndex > 0) {
+    currentIndex--;
+  } else {
+    currentIndex = haikus.length - 1;
+  }
+  updateHaiku();
+  if (autoRotate) startRotation();
+}
