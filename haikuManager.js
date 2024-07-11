@@ -1,28 +1,19 @@
 const haikus = [
-  {
-    text: 'Cherry blossoms fade,<br>Silent under moonlit sky,<br>Spring whispers goodbye.',
-    image: 'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-mVxBAo9q4fan5FDKqmUmsyEn.png'
-  },
-  {
-    text: 'Winter solitude—<br>a single crow flutters down,<br>snow muffles the land.',
-    image: 'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-aUnBGsdAd4vnA5BgFM3J9WqA.png'
-  },
-  {
-    text: 'Morning glory blooms,<br>sunrise peeks through whispering leaves,<br>day awakes anew.',
-    image: 'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-OkTu7c5W5kaVKQTpubm7c3XP.png'
-  },
-  {
-    text: 'Ocean\'s gentle roar,<br>waves caress the sandy shore,<br>peaceful heart restored.',
-    image: 'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-v3tuux2b2NrvJGKEfodj93Vl.png'
-  },
-  {
-    text: 'Mountains standing tall,<br>clouds caress their snowy peaks,<br>silent giants watch.',
-    image: 'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-oCDPbi0PCAg27BJhJSht2pVZ.png'
-  },
-  {
-    text: 'Autumn leaves drift by,<br>crimson, gold, a fiery dance,<br>cool breeze whispers tales.',
-    image: 'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-wz7vpoOSEhHSWbcBP0ZPn8cp.png'
-  }
+  'Cherry blossoms fade,<br>Silent under moonlit sky,<br>Spring whispers goodbye.',
+  'Winter solitude—<br>a single crow flutters down,<br>snow muffles the land.',
+  'Morning glory blooms,<br>sunrise peeks through whispering leaves,<br>day awakes anew.',
+  'Ocean\'s gentle roar,<br>waves caress the sandy shore,<br>peaceful heart restored.',
+  'Mountains standing tall,<br>clouds caress their snowy peaks,<br>silent giants watch.',
+  'Autumn leaves drift by,<br>crimson, gold, a fiery dance,<br>cool breeze whispers tales.'
+];
+
+const haikuImages = [
+  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-yzpEFPKYZDv2DHKwN5yXltRL.png',
+  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-MS7aREnpLNJPyQqpzZDYFFl9.png',
+  '',
+  '',
+  '',
+  ''
 ];
 
 let currentIndex = 0;
@@ -32,8 +23,8 @@ let haikuInterval;
 function updateHaiku() {
   document.getElementById('haiku').style.opacity = 0;
   setTimeout(function() {
-    document.getElementById('haiku').innerHTML = haikus[currentIndex].text.replace(/'/g, "'");
-    document.getElementById('haikuImage').src = haikus[currentIndex].image;
+    document.getElementById('haiku').innerHTML = haikus[currentIndex].replace(/'/g, "'");
+    document.getElementById('haikuImage').src = haikuImages[currentIndex];
     document.getElementById('haiku').style.opacity = 1;
     updateBackground();
   }, 500);
