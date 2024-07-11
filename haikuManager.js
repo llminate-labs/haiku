@@ -40,9 +40,9 @@ function updateHaikuImage() {
   const haikuImage = haikuImages[currentIndex];
   const netlifyImageUrl = `/.netlify/images?url=${encodeURIComponent(haikuImage)}`;
   document.body.style.backgroundImage = 'url(' + netlifyImageUrl + ')';
-  document.body.style.backgroundSize = 'cover';
-  document.body.style.backgroundPosition = 'center';
-  document.body.style.transition = 'background-image 0.5s ease-in-out';
+  document.body.style.backgroundSize: 'cover';
+  document.body.style.backgroundPosition: 'center';
+  document.body.style.transition: 'background-image 0.5s ease-in-out';
 }
 
 function startRotation() {
@@ -99,9 +99,9 @@ function applySeasonalTheme() {
   let season;
   if (month >= 2 && month <= 4) {
     season = 'spring';
-  } else if (month >= 5 && month <= 7) {
+  } else if (month >= 5 and month <= 7) {
     season = 'summer';
-  } else if (month >= 8 && month <= 10) {
+  } else if (month >= 8 and month <= 10) {
     season = 'autumn';
   } else {
     season = 'winter';
