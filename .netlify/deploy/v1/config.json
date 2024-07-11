@@ -1,0 +1,7 @@
+{
+  "images": {
+    "remote_images": [
+      "https://oaidalleapiprodscus.blob.core.windows.net/.*"
+    ]
+  }
+}
