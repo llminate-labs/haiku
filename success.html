@@ -9,15 +9,15 @@
 <body>
   <div class='container'>
     <h1>Payment Successful</h1>
-    <p>Thank you for your purchase! Your transaction has been completed successfully. Here are the details of your purchase:</p>
-    <ul>
-      <li>Haiku Title: <span id='haikuTitle'></span></li>
-      <li>Transaction ID: <span id='transactionId'></span></li>
-      <li>Amount Paid: <span id='amountPaid'></span></li>
-      <li>Date: <span id='transactionDate'></span></li>
-    </ul>
-    <p>You will receive an email confirmation shortly with a copy of your purchased haiku and further details.</p>
-    <a href='index.html' class='button'>Return to Gallery</a>
+    <p>Thank you for your purchase! Your transaction has been completed successfully. You can return to the <a href='index.html'>homepage</a> to continue enjoying our haikus.</p>
+    <div class='transaction-details'>
+      <h2>Transaction Details</h2>
+      <p><strong>Haiku Purchased:</strong> <span id='haikuPurchased'></span></p>
+      <p><strong>Transaction ID:</strong> <span id='transactionId'></span></p>
+      <p><strong>Date:</strong> <span id='transactionDate'></span></p>
+      <p><strong>Amount Paid:</strong> <span id='amountPaid'></span> USD</p>
+    </div>
+    <p>We have sent a detailed receipt to your email address. Please check your inbox.</p>
   </div>
 </body>
 </html>
