@@ -38,7 +38,10 @@ function updateBackground() {
 
 function updateHaikuImage() {
   const haikuImage = haikuImages[currentIndex];
-  document.getElementById('haikuImage').src = haikuImage;
+  document.body.style.backgroundImage = 'url(' + haikuImage + ')';
+  document.body.style.backgroundSize = 'cover';
+  document.body.style.backgroundPosition = 'center';
+  document.body.style.transition = 'background-image 0.5s ease-in-out';
 }
 
 function startRotation() {
