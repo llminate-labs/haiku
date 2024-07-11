@@ -7,6 +7,15 @@ const haikus = [
   'Autumn leaves drift by,<br>crimson, gold, a fiery dance,<br>cool breeze whispers tales.'
 ];
 
+const haikuImages = [
+  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-vfT2ERmv5Rl1HNuzSCJMdlfV.png',
+  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-mYE6JDiU4qUPtdusFjxIUIKk.png',
+  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-givR8spxxwQTLriQHesGKneE.png',
+  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-x66w2TWoyFipSazoMGKOjEGM.png',
+  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-GaTHBmZOg729UYif9h2PkFx5.png',
+  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-SlTsWYEvDlhiXm3brZCQXZYo.png'
+];
+
 let currentIndex = 0;
 let autoRotate = true;
 let haikuInterval;
@@ -15,6 +24,7 @@ function updateHaiku() {
   document.getElementById('haiku').style.opacity = 0;
   setTimeout(function() {
     document.getElementById('haiku').innerHTML = haikus[currentIndex].replace(/'/g, "'");
+    document.getElementById('haikuImage').src = haikuImages[currentIndex];
     document.getElementById('haiku').style.opacity = 1;
     updateBackground();
   }, 500);
