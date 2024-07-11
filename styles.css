@@ -41,3 +41,11 @@ button:hover { transform: translateY(-2px); }
 #haikuContainer { border-top: 5px solid #3498db; }
 #haiku { font-size: 30px; font-weight: bold; }
 @media (max-width: 800px) { body { background-image: none; } }
+
+/* Social Sharing Button Styles */
+.social-sharing { display: flex; justify-content: center; gap: 10px; margin-top: 20px; }
+.social-button { padding: 10px 20px; border-radius: 5px; color: white; text-decoration: none; font-size: 16px; }
+.facebook { background-color: #3b5998; }
+.twitter { background-color: #1da1f2; }
+.instagram { background-color: #e1306c; }
+.social-button:hover { opacity: 0.8; }
