@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang='en'>
+
 <head>
   <meta charset='UTF-8'>
+  <meta http-equiv='Content-Security-Policy' content="default-src 'self'; script-src 'self' https://js.stripe.com; connect-src 'self' https://api.stripe.com; img-src 'self'; style-src 'self'; object-src 'none';">
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <title>Haiku Home</title>
   <link rel='stylesheet' href='styles.css'>
   <link rel='stylesheet' href='buttonStyles.css'>
   <script src='https://js.stripe.com/v3/'></script>
   <script src='app.js' defer></script>
+  <title>Haiku Home</title>
 </head>
+
 <body>
   <div class='container'>
     <h1>Welcome to Our Enhanced Haiku Gallery</h1>
@@ -24,4 +27,5 @@
   <script src='haikuManager.js' defer></script>
   <script src='purchaseManager.js' defer></script>
 </body>
+
 </html>

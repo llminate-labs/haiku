@@ -9,16 +9,16 @@
 <body>
   <div class='container'>
     <h1>Register</h1>
-    <form id='registrationForm'>
+    <form action='/register' method='POST'>
       <label for='username'>Username:</label>
       <input type='text' id='username' name='username' required>
       <label for='email'>Email:</label>
       <input type='email' id='email' name='email' required>
       <label for='password'>Password:</label>
       <input type='password' id='password' name='password' required>
-      <button type='submit'>Register</button>
+      <button type='submit'>Register</a>
     </form>
+    <p>Already have an account? <a href='login.html'>Login here</a></p>
   </div>
-  <script src='authManager.js' defer></script>
 </body>
 </html>
