@@ -58,6 +58,7 @@ function stopRotation() {
 document.addEventListener('DOMContentLoaded', function() {
   updateHaiku();
   if (autoRotate) startRotation();
+  applySeasonalTheme();
 });
 
 document.getElementById('newHaikuBtn').addEventListener('click', incrementHaikuIndex);
@@ -91,4 +92,19 @@ function decrementHaikuIndex() {
   }
   updateHaiku();
   if (autoRotate) startRotation();
+}
+
+function applySeasonalTheme() {
+  const month = new Date().getMonth();
+  let season;
+  if (month >= 2 && month <= 4) {
+    season = 'spring';
+  } else if (month >= 5 && month <= 7) {
+    season = 'summer';
+  } else if (month >= 8 && month <= 10) {
+    season = 'autumn';
+  } else {
+    season = 'winter';
+  }
+  document.documentElement.setAttribute('data-theme', season);
 }
