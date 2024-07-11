@@ -8,12 +8,12 @@ const haikus = [
 ];
 
 const haikuImages = [
-  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-tr0334ROrP8yT8fz4rzMOLdf.png',
-  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-wbWiDDAmtPHrjE9PE91McIcq.png',
-  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-2YQoNOQ1YWcbd3wspwkqtTaV.png',
-  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-1XvjVmRBo1fnzOY57TeJ2req.png',
-  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-Va5bO3dJpKs766YV5ouNcfZP.png',
-  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-ynocbjl9DsNHupcQnz2nNHMe.png'
+  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-riwVXo7koVTzWrMeeCRLQGD8.png',
+  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-GzY43mXLnzJqxO0zuH13XNIj.png',
+  '',
+  '',
+  '',
+  ''
 ];
 
 let currentIndex = 0;
@@ -24,7 +24,7 @@ function updateHaiku() {
   document.getElementById('haiku').style.opacity = 0;
   setTimeout(function() {
     document.getElementById('haiku').innerHTML = haikus[currentIndex].replace(/'/g, "'");
-    document.getElementById('haiku').style.backgroundImage = `url(${haikuImages[currentIndex]})`;
+    document.getElementById('haikuImage').src = haikuImages[currentIndex];
     document.getElementById('haiku').style.opacity = 1;
     updateBackground();
   }, 500);
