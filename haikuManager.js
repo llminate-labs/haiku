@@ -1,75 +1,31 @@
-const haikus = [
-  'Cherry blossoms fade,<br>Silent under moonlit sky,<br>Spring whispers goodbye.',
-  'Winter solitude—<br>a single crow flutters down,<br>snow muffles the land.',
-  'Morning glory blooms,<br>sunrise peeks through whispering leaves,<br>day awakes anew.',
-  'Ocean\'s gentle roar,<br>waves caress the sandy shore,<br>peaceful heart restored.',
-  'Mountains standing tall,<br>clouds caress their snowy peaks,<br>silent giants watch.',
-  'Autumn leaves drift by,<br>crimson, gold, a fiery dance,<br>cool breeze whispers tales.'
-];
+<!DOCTYPE html>
+<html lang='en'>
 
-let currentIndex = 0;
-let autoRotate = true;
-let haikuInterval;
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='Content-Security-Policy' content="default-src 'self'; script-src 'self' https://js.stripe.com; connect-src 'self' https://api.stripe.com; img-src 'self'; style-src 'self'; object-src 'none';">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel='stylesheet' href='styles.css'>
+  <link rel='stylesheet' href='buttonStyles.css'>
+  <script src='https://js.stripe.com/v3/'></script>
+  <script src='app.js' defer></script>
+  <title>Haiku Home</title>
+</head>
 
-function updateHaiku() {
-  document.getElementById('haiku').style.opacity = 0;
-  setTimeout(function() {
-    document.getElementById('haiku').innerHTML = haikus[currentIndex].replace(/'/g, "'");
-    document.getElementById('haiku').style.opacity = 1;
-    updateBackground();
-  }, 500);
-}
+<body>
+  <div class='container'>
+    <h1>Welcome to Our Enhanced Haiku Gallery</h1>
+    <p>Use ← and → keys or the buttons below to navigate through the haikus, or just wait for the automatic transition.</p>
+    <button id='prevHaikuBtn' role='button' tabindex='0'>Previous Haiku</button>
+    <button id='newHaikuBtn' role='button' tabindex='0'>Next Haiku</button>
+    <div id='haikuContainer' role='region' aria-live='polite'>
+      <img id='haikuImage' src='' alt='Haiku Image' style='width:100%; height:auto; margin-bottom:20px;'>
+      <p id='haiku' tabindex='0'>Loading Haikus...</p>
+      <button id='buyHaikuBtn' role='button' tabindex='0'>Buy This Haiku</button>
+    </div>
+  </div>
+  <script src='haikuManager.js' defer></script>
+  <script src='purchaseManager.js' defer></script>
+</body>
 
-function updateBackground() {
-  const themeMap = { 0: 'spring', 1: 'winter', 2: 'morning', 3: 'ocean', 4: 'mountain', 5: 'autumn' };
-  const currentTheme = themeMap[currentIndex];
-  document.documentElement.setAttribute('data-theme', currentTheme);
-}
-
-function startRotation() {
-  haikuInterval = setInterval(function() {
-    incrementHaikuIndex();
-  }, 5000);
-}
-
-function stopRotation() {
-  clearInterval(haikuInterval);
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-  updateHaiku();
-  if (autoRotate) startRotation();
-});
-
-document.getElementById('newHaikuBtn').addEventListener('click', incrementHaikuIndex);
-document.getElementById('prevHaikuBtn').addEventListener('click', decrementHaikuIndex);
-document.addEventListener('keydown', function(event) {
-  if (event.key === 'ArrowRight') {
-    incrementHaikuIndex();
-  }
-  if (event.key === 'ArrowLeft') {
-    decrementHaikuIndex();
-  }
-});
-
-function incrementHaikuIndex() {
-  stopRotation();
-  if (currentIndex < haikus.length - 1) {
-    currentIndex++;
-  } else {
-    currentIndex = 0;
-  }
-  updateHaiku();
-  if (autoRotate) startRotation();
-}
-
-function decrementHaikuIndex() {
-  stopRotation();
-  if (currentIndex > 0) {
-    currentIndex--;
-  } else {
-    currentIndex = haikus.length - 1;
-  }
-  updateHaiku();
-  if (autoRotate) startRotation();
-}
+</html>
