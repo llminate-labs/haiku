@@ -28,11 +28,29 @@
         <a href='#' class='share-btn twitter' onclick='shareOnTwitter()'>Share on Twitter</a>
         <a href='#' class='share-btn instagram' onclick='shareOnInstagram()'>Share on Instagram</a>
       </div>
+      <!-- Review Section -->
+      <div id='reviewSection'>
+        <h3>User Reviews</h3>
+        <ul id='reviewList'></ul>
+        <form id='reviewForm'>
+          <textarea id='reviewText' placeholder='Enter your review here...' required></textarea>
+          <label for='rating'>Rating:</label>
+          <select id='rating'>
+            <option value='1'>1</option>
+            <option value='2'>2</option>
+            <option value='3'>3</option>
+            <option value='4'>4</option>
+            <option value='5'>5</option>
+          </select>
+          <button type='submit'>Submit Review</button>
+        </form>
+      </div>
     </div>
   </div>
   <script src='haikuManager.js' defer></script>
   <script src='purchaseManager.js' defer></script>
   <script src='socialSharing.js' defer></script>
+  <script src='reviewManager.js' defer></script>
 </body>
 
 </html>
