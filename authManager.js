@@ -1,4 +1,4 @@
-// Placeholder for authentication management logic
+// Authentication management logic
 // This will handle user registration, login, and session management
 
 document.getElementById('loginForm').addEventListener('submit', function(event) {
