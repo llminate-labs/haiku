@@ -4,7 +4,8 @@
   "description": "A website to display and sell haikus",
   "main": "index.js",
   "dependencies": {
-    "stripe": "^8.174.0"
+    "stripe": "^8.174.0",
+    "mongodb": "^4.2.0"
   },
   "devDependencies": {},
   "scripts": {
