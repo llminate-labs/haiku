@@ -11,11 +11,10 @@ exports.handler = async (event, context) => {
   }
 
   try {
-    const { items, currency } = JSON.parse(event.body);
+    const { items, currency, email } = JSON.parse(event.body);
     const sanitizedItems = items.map(item => ({ id: String(item.id).replace(/[^\w\s]/gi, '') }));
     const sanitizedCurrency = String(currency).replace(/[^a-zA-Z]/g, '');
 
-    const host = event.headers.host;
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
       line_items: sanitizedItems.map(item => ({
@@ -44,9 +43,9 @@ exports.handler = async (event, context) => {
 
     const mailOptions = {
       from: 'your-email@gmail.com',
-      to: 'customer-email@example.com',
+      to: email,
       subject: 'Haiku Purchase Confirmation',
-      text: `Thank you for your purchase! Here are the details:\nHaiku: ${item.id}\nTransaction ID: ${session.id}\nAmount Paid: $20\nDate: ${new Date().toLocaleDateString()}`
+      text: `Thank you for your purchase! Here are your transaction details:\nHaiku: ${item.id}\nTransaction ID: ${session.id}\nAmount Paid: $20 USD` 
     };
 
     await transporter.sendMail(mailOptions);
