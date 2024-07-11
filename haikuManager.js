@@ -8,12 +8,12 @@ const haikus = [
 ];
 
 const haikuImages = [
-  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-yzpEFPKYZDv2DHKwN5yXltRL.png',
-  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-MS7aREnpLNJPyQqpzZDYFFl9.png',
-  '',
-  '',
-  '',
-  ''
+  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-iQzh3ik4BvqdNx9c7lZpC8DP.png',
+  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-MlDW0hl8wdHLdleHgDwTrZeS.png',
+  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-2baTgqG8RIGGZ3GBu0HDI6EO.png',
+  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-4d0Q87nowhlOW5trrfya9Om9.png',
+  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-fyQcP9NZ3UFFg8nDkYhN6pFn.png',
+  'https://oaidalleapiprodscus.blob.core.windows.net/private/org-xoveDohUTeWTwd7uYScv2uyz/user-7E63qmNDGeNd8DOac52nI0qL/img-lmw9Hdn9eEsMdo4GTZwMetj6.png'
 ];
 
 let currentIndex = 0;
