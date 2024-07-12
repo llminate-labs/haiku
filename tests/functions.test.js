@@ -1,5 +1,5 @@
-const { createCheckoutSession, handleReviewSubmission } = require('../../../netlify/functions/create-checkout-session');
-const { reviewHandler } = require('../../../netlify/functions/reviewHandler');
+const { createCheckoutSession, handleReviewSubmission } = require('../../netlify/functions/create-checkout-session');
+const { reviewHandler } = require('../../netlify/functions/reviewHandler');
 
 describe('Function Execution Tests', () => {
   it('should create a checkout session successfully', async () => {
