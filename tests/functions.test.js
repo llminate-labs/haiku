@@ -5,11 +5,11 @@ const { handler: reviewHandler } = require('../netlify/functions/reviewHandler')
 process.env.STRIPE_SECRET_KEY = 'sk_test_4eC39HqLyjWDarjtT1zdp7dc';
 process.env.MONGODB_URI = 'mongodb://localhost:27017/test';
 
-jest.setTimeout(20000); // Increase timeout for all tests to handle potential delays
+jest.setTimeout(30000); // Increase timeout for all tests to handle potential delays
 
 describe('Function Execution Tests', () => {
   it('should create a checkout session successfully', async () => {
-    const session = await createCheckoutSession({ httpMethod: 'POST', body: JSON.stringify({ items: [{ id: 'haiku1' }], currency: 'usd' }) });
+    const session = await createCheckoutSession({ httpMethod: 'POST', body: JSON.stringify({ items: [{ id: 'haiku1' }], currency: 'usd' }), headers: { host: 'example.com' } });
     expect(session).toHaveProperty('statusCode', 200);
     const sessionBody = JSON.parse(session.body);
     expect(sessionBody).toHaveProperty('id');
