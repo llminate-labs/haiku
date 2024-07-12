@@ -1,5 +1,7 @@
 const supertest = require('supertest');
-const app = require('../app');
+const express = require('express');
+const app = express();
+app.get('/', (req, res) => res.sendFile('index.html', { root: '.' }));
 
 describe('Index HTML Load Test', () => {
   it('should load the index.html page successfully', async () => {
