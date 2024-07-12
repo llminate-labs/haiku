@@ -38,6 +38,7 @@ exports.handler = async (event, context) => {
       body: JSON.stringify({ id: session.id })
     };
   } catch (error) {
+    console.error('Error in creating checkout session:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({ error: 'Failed to create session' })

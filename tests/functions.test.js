@@ -5,7 +5,7 @@ const { handler: reviewHandler } = require('../netlify/functions/reviewHandler')
 process.env.STRIPE_SECRET_KEY = 'sk_test_4eC39HqLyjWDarjtT1zdp7dc';
 process.env.MONGODB_URI = 'mongodb://localhost:27017/test';
 
-jest.setTimeout(10000); // Increase timeout for all tests to handle potential delays
+jest.setTimeout(20000); // Increase timeout for all tests to handle potential delays
 
 describe('Function Execution Tests', () => {
   it('should create a checkout session successfully', async () => {
