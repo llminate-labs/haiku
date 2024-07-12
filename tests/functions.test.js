@@ -1,6 +1,10 @@
 const { handler: createCheckoutSession } = require('../netlify/functions/create-checkout-session');
 const { handler: reviewHandler } = require('../netlify/functions/reviewHandler');
 
+// Mock environment variables
+process.env.STRIPE_SECRET_KEY = 'sk_test_4eC39HqLyjWDarjtT1zdp7dc';
+process.env.MONGODB_URI = 'mongodb://localhost:27017/test';
+
 describe('Function Execution Tests', () => {
   it('should create a checkout session successfully', async () => {
     const session = await createCheckoutSession({ httpMethod: 'POST', body: JSON.stringify({ items: [{ id: 'haiku1' }], currency: 'usd' }) });
