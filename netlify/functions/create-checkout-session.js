@@ -16,6 +16,9 @@ exports.handler = async (event, context) => {
     const sanitizedCurrency = String(currency).replace(/[^a-zA-Z]/g, '');
 
     const host = event.headers.host;
+    if (!host) {
+      throw new Error('Host header is missing');
+    }
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
       line_items: sanitizedItems.map(item => ({
@@ -38,6 +41,7 @@ exports.handler = async (event, context) => {
       body: JSON.stringify({ id: session.id })
     };
   } catch (error) {
+    console.error('Error in creating checkout session:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({ error: 'Failed to create session' })
