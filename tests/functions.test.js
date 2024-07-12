@@ -1,14 +1,18 @@
-const { createCheckoutSession, handleReviewSubmission } = require('../netlify/functions/create-checkout-session');
-const { reviewHandler } = require('../netlify/functions/reviewHandler');
+const { handler: createCheckoutSession } = require('../netlify/functions/create-checkout-session');
+const { handler: reviewHandler } = require('../netlify/functions/reviewHandler');
 
 describe('Function Execution Tests', () => {
   it('should create a checkout session successfully', async () => {
-    const session = await createCheckoutSession({ items: [{ id: 'haiku1' }], currency: 'usd' });
-    expect(session).toHaveProperty('id');
+    const session = await createCheckoutSession({ httpMethod: 'POST', body: JSON.stringify({ items: [{ id: 'haiku1' }], currency: 'usd' }) });
+    expect(session).toHaveProperty('statusCode', 200);
+    const sessionBody = JSON.parse(session.body);
+    expect(sessionBody).toHaveProperty('id');
   });
 
   it('should handle review submission successfully', async () => {
-    const result = await handleReviewSubmission({ haikuId: 'haiku1', review: 'Great haiku!', rating: 5, userId: 'user123' });
-    expect(result).toHaveProperty('message', 'Review submitted successfully.');
+    const result = await reviewHandler({ httpMethod: 'POST', body: JSON.stringify({ haikuId: 'haiku1', review: 'Great haiku!', rating: 5, userId: 'user123' }) });
+    expect(result).toHaveProperty('statusCode', 200);
+    const resultBody = JSON.parse(result.body);
+    expect(resultBody).toHaveProperty('message', 'Review submitted successfully.');
   });
 });
