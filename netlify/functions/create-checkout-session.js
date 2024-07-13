@@ -5,7 +5,7 @@ exports.handler = async (event, context) => {
    return {
      statusCode: 405,
      body: JSON.stringify({ error: 'Method Not Allowed' }),
-     headers: { 'Allow': 'POST' }
+     headers: { 'Allow': 'POST', 'Content-Type': 'application/json' }
    };
  }
 
@@ -43,13 +43,15 @@ exports.handler = async (event, context) => {
 
    return {
      statusCode: 200,
-     body: JSON.stringify({ id: session.id })
+     body: JSON.stringify({ id: session.id }),
+     headers: { 'Content-Type': 'application/json' }
    };
  } catch (error) {
    console.error('Error in creating checkout session:', error);
    return {
      statusCode: 500,
-     body: JSON.stringify({ error: 'Failed to create session', details: error.message })
+     body: JSON.stringify({ error: 'Failed to create session', details: error.message }),
+     headers: { 'Content-Type': 'application/json' }
    };
  }
 };
