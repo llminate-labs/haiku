@@ -29,7 +29,8 @@ exports.handler = async (event, context) => {
       }
 
       // Insert review
-      await reviews.insertOne({ haikuId, review, rating, userId, date: new Date() });
+      const result = await reviews.insertOne({ haikuId, review, rating, userId, date: new Date() });
+      console.log('Inserted Review:', result.insertedId); // Add logging for debugging
       return {
         statusCode: 200,
         body: JSON.stringify({ message: 'Review submitted successfully.' })

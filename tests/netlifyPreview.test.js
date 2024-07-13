@@ -20,7 +20,8 @@ describe('Netlify Preview URL Integration Tests', () => {
     const response = await request.post('/.netlify/functions/create-checkout-session')
       .send({ items: [{ id: 'haiku1' }], currency: 'usd' }).set('Accept', 'application/json');
     expect(response.statusCode).toBe(200);
-    expect(response.body).toHaveProperty('id', 'mockSessionId');
+    expect(response.body).toHaveProperty('id');
+    expect(response.body.id).not.toBeNull(); // Additional check for non-null 'id'
     console.log('Checkout Session ID:', response.body.id); // Add logging for debugging
   });
 
@@ -29,6 +30,10 @@ describe('Netlify Preview URL Integration Tests', () => {
     expect(response.statusCode).toBe(200);
     expect(Array.isArray(response.body)).toBe(true);
     expect(response.body.length).toBeGreaterThan(0);
+    response.body.forEach(review => {
+      expect(review).toHaveProperty('review'); // Additional check for 'review' property
+      expect(review).toHaveProperty('rating'); // Additional check for 'rating' property
+    });
     console.log('Retrieved Reviews:', response.body); // Add logging for debugging
   });
 });

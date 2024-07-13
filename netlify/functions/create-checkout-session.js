@@ -36,7 +36,7 @@ exports.handler = async (event, context) => {
       cancel_url: `https://${host}/cancel`
     });
 
-    console.log('Created Checkout Session:', session); // Add logging for debugging
+    console.log('Created Checkout Session:', session.id); // Add logging for debugging
 
     return {
       statusCode: 200,
