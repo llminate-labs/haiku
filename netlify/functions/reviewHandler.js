@@ -44,12 +44,20 @@ exports.handler = async (event, context) => {
       console.log('GET Request Query Parameters:', { haikuId }); // Add logging for debugging
 
       const queryResults = await reviews.find({ haikuId }).toArray();
-      console.log('Retrieved Reviews:', queryResults); // Existing logging
-      return {
-        statusCode: 200,
-        body: JSON.stringify(queryResults),
-        headers: { 'Content-Type': 'application/json' }
-      };
+      if (queryResults.length > 0) {
+        console.log('Retrieved Reviews:', queryResults); // Existing logging
+        return {
+          statusCode: 200,
+          body: JSON.stringify(queryResults),
+          headers: { 'Content-Type': 'application/json' }
+        };
+      } else {
+        return {
+          statusCode: 404,
+          body: JSON.stringify({ error: 'No reviews found' }),
+          headers: { 'Content-Type': 'application/json' }
+        };
+      }
     }
   } catch (error) {
     console.error('Error in reviewHandler:', error);
