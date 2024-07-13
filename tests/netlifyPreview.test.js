@@ -20,7 +20,7 @@ describe('Netlify Preview URL Integration Tests', () => {
     const response = await request.post('/.netlify/functions/create-checkout-session')
       .send({ items: [{ id: 'haiku1' }], currency: 'usd' }).set('Accept', 'application/json');
     expect(response.statusCode).toBe(200);
-    expect(response.body).toHaveProperty('id');
+    expect(response.body).toHaveProperty('id', 'mockSessionId');
     console.log('Checkout Session ID:', response.body.id); // Add logging for debugging
   });
 
