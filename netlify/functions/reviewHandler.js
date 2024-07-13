@@ -35,7 +35,7 @@ exports.handler = async (event, context) => {
         body: JSON.stringify({ message: 'Review submitted successfully.' })
       };
     } else if (event.httpMethod === 'GET') {
-      const { haikuId } = JSON.parse(event.queryStringParameters);
+      const { haikuId } = event.queryStringParameters ? JSON.parse(event.queryStringParameters) : {};
       const queryResults = await reviews.find({ haikuId }).toArray();
       return {
         statusCode: 200,
@@ -43,6 +43,7 @@ exports.handler = async (event, context) => {
       };
     }
   } catch (error) {
+    console.error('Error in reviewHandler:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({ error: 'Failed to connect to database or internal server error.' })
