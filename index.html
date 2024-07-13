@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang='en'>
-
 <head>
   <meta charset='UTF-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
@@ -10,7 +9,6 @@
   <script src='app.js' defer></script>
   <title>Haiku Home</title>
 </head>
-
 <body>
   <div class='container'>
     <h1 class='title'>Welcome to Our Enhanced Haiku Gallery</h1>
@@ -25,9 +23,9 @@
       <button id='buyHaikuBtn' role='button' tabindex='0'>Buy This Haiku</button>
       <!-- Social Sharing Buttons -->
       <div class='social-sharing'>
-        <a href='#' class='share-btn facebook' onclick='shareOnFacebook()'>Share on Facebook</a>
-        <a href='#' class='share-btn twitter' onclick='shareOnTwitter()'>Share on Twitter</a>
-        <a href='#' class='share-btn instagram' onclick='shareOnInstagram()'>Share on Instagram</a>
+        <a href='#' class='share-btn facebook' onclick='shareOnFacebook()' aria-label='Share on Facebook'></a>
+        <a href='#' class='share-btn twitter' onclick='shareOnTwitter()' aria-label='Share on Twitter'></a>
+        <a href='#' class='share-btn instagram' onclick='shareOnInstagram()' aria-label='Share on Instagram'></a>
       </div>
       <!-- Review Section -->
       <div id='reviewSection' class='review-section'>
@@ -53,5 +51,4 @@
   <script src='socialSharing.js' defer></script>
   <script src='reviewManager.js' defer></script>
 </body>
-
 </html>
