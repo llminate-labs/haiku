@@ -21,12 +21,13 @@ describe('Netlify Preview URL Integration Tests', () => {
       .send({ items: [{ id: 'haiku1' }], currency: 'usd' })
       .set('Accept', 'application/json');
     expect(response.statusCode).toBe(200);
-    expect(response.body).toHaveProperty('id');
+    expect(response.body).toHaveProperty('id', 'mockSessionId'); // Adjusted to match mock data
   });
 
   it('should retrieve reviews correctly via GET', async () => {
     const response = await request.get('/.netlify/functions/reviewHandler?haikuId=haiku1');
     expect(response.statusCode).toBe(200);
     expect(response.body).toBeInstanceOf(Array);
+    expect(response.body.length).toBeGreaterThan(0); // Ensure there is at least one review
   });
 });
