@@ -21,6 +21,7 @@ describe('Netlify Preview URL Integration Tests', () => {
       .send({ items: [{ id: 'haiku1' }], currency: 'usd' }).set('Accept', 'application/json');
     expect(response.statusCode).toBe(200);
     expect(response.body).toHaveProperty('id');
+    expect(typeof response.body.id).toBe('string'); // Check that the 'id' is a string
     expect(response.body.id).not.toBeNull(); // Additional check for non-null 'id'
     console.log('Checkout Session ID:', response.body.id); // Add logging for debugging
   });
@@ -33,6 +34,8 @@ describe('Netlify Preview URL Integration Tests', () => {
     response.body.forEach(review => {
       expect(review).toHaveProperty('review'); // Additional check for 'review' property
       expect(review).toHaveProperty('rating'); // Additional check for 'rating' property
+      expect(typeof review.review).toBe('string'); // Check that the 'review' is a string
+      expect(typeof review.rating).toBe('number'); // Check that the 'rating' is a number
     });
     console.log('Retrieved Reviews:', response.body); // Add logging for debugging
   });
