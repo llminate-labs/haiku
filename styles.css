@@ -3,7 +3,7 @@ body { font-family: 'Merriweather', serif; text-align: center; color: #2c3e50; h
 #newHaikuBtn, #prevHaikuBtn, #buyHaikuBtn { margin-top: 20px; padding: 15px 35px; font-size: 18px; color: #333; background-color: rgba(52, 152, 219, 0.8); border: none; border-radius: 15px; cursor: pointer; transition: background-color 0.3s; outline: none; }
 #newHaikuBtn:hover, #prevHaikuBtn:hover, #buyHaikuBtn:hover { background-color: rgba(41, 128, 185, 0.8); }
 #haikuContainer { background-color: rgba(255, 255, 255, 0.75); padding: 20px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-top: 20px; }
-#haiku { font-size: 28px; line-height: 1.6; color: #444; opacity: 1; transition: opacity 0.5s ease; text-align: center; }
+#haiku { font-size: 28px; line-height: 1.6; color: #444; opacity: 1; transition: opacity 0.5s ease; text-align: center; padding: 20px; }
 .title { font-size: 36px; font-weight: bold; margin-bottom: 20px; }
 .navigation-instructions { margin-bottom: 30px; }
 .button-container { display: flex; justify-content: space-between; margin-bottom: 20px; }
