@@ -1,19 +1,19 @@
 body { font-family: 'Merriweather', serif; text-align: center; color: #2c3e50; height: 100vh; display: flex; align-items: center; justify-content: center; background: none; }
-.container { width: 90%; max-width: 1000px; background: #f8f9fa; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-radius: 20px; margin-top: 20px; }
-#newHaikuBtn, #prevHaikuBtn, #buyHaikuBtn { margin-top: 20px; padding: 15px 35px; font-size: 18px; color: #333; background-color: #3498db; border: none; border-radius: 15px; cursor: pointer; transition: background-color 0.3s; outline: none; }
-#newHaikuBtn:hover, #prevHaikuBtn:hover, #buyHaikuBtn:hover { background-color: #2980b9; }
-#haikuContainer { background-color: #fff; padding: 20px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-top: 20px; }
+.container { width: 90%; max-width: 1000px; background: rgba(248, 249, 250, 0.8); padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-radius: 20px; margin-top: 20px; transition: background-color 0.3s ease-in-out; }
+#newHaikuBtn, #prevHaikuBtn, #buyHaikuBtn { margin-top: 20px; padding: 15px 35px; font-size: 18px; color: #333; background-color: rgba(52, 152, 219, 0.8); border: none; border-radius: 15px; cursor: pointer; transition: background-color 0.3s; outline: none; }
+#newHaikuBtn:hover, #prevHaikuBtn:hover, #buyHaikuBtn:hover { background-color: rgba(41, 128, 185, 0.8); }
+#haikuContainer { background-color: rgba(255, 255, 255, 0.75); padding: 20px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-top: 20px; }
 #haiku { font-size: 28px; line-height: 1.6; color: #444; opacity: 1; transition: opacity 0.5s ease; text-align: center; }
 .title { font-size: 36px; font-weight: bold; margin-bottom: 20px; }
 .navigation-instructions { margin-bottom: 30px; }
 .button-container { display: flex; justify-content: space-between; margin-bottom: 20px; }
 .social-sharing { margin: 30px 0; }
-.review-section { margin-top: 40px; padding: 20px; border: 1px solid #ddd; border-radius: 10px; background-color: #fff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+.review-section { margin-top: 40px; padding: 20px; border: 1px solid #ddd; border-radius: 10px; background-color: rgba(255, 255, 255, 0.75); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
 .review-section h3 { margin-bottom: 20px; font-size: 24px; }
 .review-section textarea { width: 100%; height: 100px; border: 1px solid #ccc; border-radius: 10px; padding: 10px; font-size: 16px; box-sizing: border-box; transition: border-color 0.3s ease; }
-.review-section textarea:focus { border-color: #3498db; outline: none; }
-.review-section button { margin-top: 10px; padding: 12px 20px; font-size: 16px; color: #fff; background-color: #3498db; border: none; border-radius: 10px; cursor: pointer; transition: background-color 0.3s, transform 0.2s; }
-.review-section button:hover { background-color: #2980b9; transform: translateY(-2px); }
+.review-section textarea:focus { border-color: rgba(52, 152, 219, 0.8); outline: none; }
+.review-section button { margin-top: 10px; padding: 12px 20px; font-size: 16px; color: #fff; background-color: rgba(52, 152, 219, 0.8); border: none; border-radius: 10px; cursor: pointer; transition: background-color 0.3s, transform 0.2s; }
+.review-section button:hover { background-color: rgba(41, 128, 185, 0.8); transform: translateY(-2px); }
 .review-section .rating { display: flex; gap: 5px; margin-bottom: 20px; }
 .review-section .rating i { font-size: 24px; cursor: pointer; color: #ccc; transition: color 0.3s; }
 .review-section .rating i:hover, .review-section .rating i.active { color: #ffcc00; }
@@ -31,10 +31,10 @@ html[data-theme='morning'] { background: linear-gradient(to top, #fde8c8 0%, #fa
 html[data-theme='ocean'] { background: linear-gradient(to top, #a1c4fd 0%, #c2e9fb 100%); }
 html[data-theme='mountain'] { background: linear-gradient(to top, #83a4d4 0%, #b6fbff 100%); }
 /* Enhance button aesthetics */
-#newHaikuBtn, #prevHaikuBtn, #buyHaikuBtn { background-color: #3498db; border-radius: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: all 0.3s ease; }
-#newHaikuBtn:hover, #prevHaikuBtn:hover, #buyHaikuBtn:hover { background-color: #2980b9; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+#newHaikuBtn, #prevHaikuBtn, #buyHaikuBtn { background-color: rgba(52, 152, 219, 0.8); border-radius: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: all 0.3s ease; }
+#newHaikuBtn:hover, #prevHaikuBtn:hover, #buyHaikuBtn:hover { background-color: rgba(41, 128, 185, 0.8); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
 .container:hover { transform: scale(1.02); transition: transform 0.3s ease; }
-button:focus { outline: none; box-shadow: 0 0 3pt 2pt #3498db; }
+button:focus { outline: none; box-shadow: 0 0 3pt 2pt rgba(52, 152, 219, 0.8); }
 html[data-theme='spring'] { filter: brightness(1.1); }
 html[data-theme='winter'] { filter: brightness(0.9); }
 html[data-theme='morning'] { filter: saturate(1.2); }
@@ -42,14 +42,14 @@ p { font-size: 18px; margin-bottom: 20px; }
 button { border: 2px solid transparent; font-weight: bold; }
 button:hover { border-color: #1abc9c; color: #fff; }
 #haiku { text-shadow: 1px 1px #ffd; }
-.container { background-color: #f8f9fa; }
+.container { background-color: rgba(248, 249, 250, 0.8); }
 #haikuContainer:before { content: ''; display: block; margin-bottom: 10px; height: 3px; background: linear-gradient(to right, #70e1f5, #ffd194); }
 /* Additional Style Enhancements */
 body { background-image: url('https://example.com/background.jpg'); background-size: cover; background-position: center; }
 .container { border: 1px solid #ccc; }
 button { transition: transform 0.2s; }
 button:hover { transform: translateY(-2px); }
-#haikuContainer { border-top: 5px solid #3498db; }
+#haikuContainer { border-top: 5px solid rgba(52, 152, 219, 0.8); }
 #haiku { font-size: 30px; font-weight: bold; }
 @media (max-width: 800px) { body { background-image: none; } }
 /* Social Media Sharing Icon Styles */
