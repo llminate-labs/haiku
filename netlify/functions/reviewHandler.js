@@ -37,6 +37,7 @@ exports.handler = async (event, context) => {
     } else if (event.httpMethod === 'GET') {
       const { haikuId } = event.queryStringParameters ? JSON.parse(event.queryStringParameters) : {};
       const queryResults = await reviews.find({ haikuId }).toArray();
+      console.log('Retrieved Reviews:', queryResults); // Add logging for debugging
       return {
         statusCode: 200,
         body: JSON.stringify(queryResults)
