@@ -19,7 +19,8 @@ describe('Netlify Preview URL Integration Tests', () => {
   it('should handle POST requests to create-checkout-session correctly', async () => {
     const response = await request.post('/.netlify/functions/create-checkout-session')
       .send({ items: [{ id: 'haiku1' }], currency: 'usd' }).set('Accept', 'application/json');
-    console.log('Create Checkout Session Response:', response.body); // Add logging for debugging
+    console.log('Full response:', response); // Add full response logging for debugging
+    console.log('Create Checkout Session Response:', response.body);
     expect(response.statusCode).toBe(200);
     expect(response.body).toHaveProperty('id');
     expect(typeof response.body.id).toBe('string');
