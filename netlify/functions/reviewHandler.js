@@ -45,7 +45,8 @@ exports.handler = async (event, context) => {
       console.log('Retrieved Reviews:', queryResults); // Existing logging
       return {
         statusCode: 200,
-        body: JSON.stringify(queryResults)
+        body: JSON.stringify(queryResults),
+        headers: { 'Content-Type': 'application/json' } // Add Content-Type header
       };
     }
   } catch (error) {
