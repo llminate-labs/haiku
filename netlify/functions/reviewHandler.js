@@ -5,7 +5,7 @@ exports.handler = async (event, context) => {
     return {
       statusCode: 405,
       body: JSON.stringify({ error: 'Method Not Allowed' }),
-      headers: { 'Allow': 'POST, GET' }
+      headers: { 'Allow': 'POST, GET', 'Content-Type': 'application/json' }
     };
   }
 
@@ -26,7 +26,8 @@ exports.handler = async (event, context) => {
       if (!purchase) {
         return {
           statusCode: 403,
-          body: JSON.stringify({ error: 'Review submission is restricted to verified purchasers.' })
+          body: JSON.stringify({ error: 'Review submission is restricted to verified purchasers.' }),
+          headers: { 'Content-Type': 'application/json' }
         };
       }
 
@@ -35,7 +36,8 @@ exports.handler = async (event, context) => {
       console.log('Inserted Review:', result.insertedId); // Existing logging
       return {
         statusCode: 200,
-        body: JSON.stringify({ message: 'Review submitted successfully.' })
+        body: JSON.stringify({ message: 'Review submitted successfully.' }),
+        headers: { 'Content-Type': 'application/json' }
       };
     } else if (event.httpMethod === 'GET') {
       const { haikuId } = event.queryStringParameters || {};
@@ -46,14 +48,15 @@ exports.handler = async (event, context) => {
       return {
         statusCode: 200,
         body: JSON.stringify(queryResults),
-        headers: { 'Content-Type': 'application/json' } // Add Content-Type header
+        headers: { 'Content-Type': 'application/json' }
       };
     }
   } catch (error) {
     console.error('Error in reviewHandler:', error);
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: 'Failed to connect to database or internal server error.' })
+      body: JSON.stringify({ error: 'Failed to connect to database or internal server error.' }),
+      headers: { 'Content-Type': 'application/json' }
     };
   } finally {
     await client.close();
