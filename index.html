@@ -13,14 +13,15 @@
 
 <body>
   <div class='container'>
-    <h1>Welcome to Our Enhanced Haiku Gallery</h1>
-    <p>Use ← and → keys or the buttons below to navigate through the haikus, or just wait for the automatic transition.</p>
-    <button id='prevHaikuBtn' role='button' tabindex='0'>Previous Haiku</button>
-    <button id='newHaikuBtn' role='button' tabindex='0'>Next Haiku</button>
+    <h1 class='title'>Welcome to Our Enhanced Haiku Gallery</h1>
+    <p class='navigation-instructions'>Use ← and → keys or the buttons below to navigate through the haikus, or just wait for the automatic transition.</p>
+    <div class='button-container'>
+      <button id='prevHaikuBtn' role='button' tabindex='0'>Previous Haiku</button>
+      <button id='newHaikuBtn' role='button' tabindex='0'>Next Haiku</button>
+    </div>
     <div id='haikuContainer' role='region' aria-live='polite'>
       <img id='haikuImage' src='' alt='Haiku Image' style='max-width: 100%; height: auto; margin-bottom: 20px;'>
       <p id='haiku' tabindex='0'>Loading Haikus...</p>
-      <img id='haikuImage' src='' alt='Haiku Image' style='max-width: 100%; height: auto;'>
       <button id='buyHaikuBtn' role='button' tabindex='0'>Buy This Haiku</button>
       <!-- Social Sharing Buttons -->
       <div class='social-sharing'>
@@ -29,7 +30,7 @@
         <a href='#' class='share-btn instagram' onclick='shareOnInstagram()'>Share on Instagram</a>
       </div>
       <!-- Review Section -->
-      <div id='reviewSection'>
+      <div id='reviewSection' class='review-section'>
         <h3>User Reviews</h3>
         <ul id='reviewList'></ul>
         <form id='reviewForm'>
