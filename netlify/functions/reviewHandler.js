@@ -52,6 +52,7 @@ exports.handler = async (event, context) => {
       const queryResults = await reviews.find({ haikuId }).toArray();
       console.log('Retrieved Reviews:', queryResults); // Add logging for debugging
 
+      // Always return 200 status code, with an empty array if no reviews are found
       return {
         statusCode: 200,
         body: JSON.stringify(queryResults),
