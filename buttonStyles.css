@@ -1,5 +1,5 @@
 #newHaikuBtn, #prevHaikuBtn, #buyHaikuBtn { 
-  background-color: #6c757d; /* Subtle Grey */ 
+  background-color: #dda0dd; /* Soft Pink */ 
   border-radius: 20px; 
   box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Soft shadow effect */ 
   color: #ffffff; /* White text */ 
@@ -11,12 +11,12 @@
 }
 
 #newHaikuBtn:hover, #prevHaikuBtn:hover, #buyHaikuBtn:hover { 
-  background-color: #5a6268; /* Darker Grey on hover */ 
+  background-color: #c58fcc; /* Darker Pink on hover */ 
   box-shadow: 0 6px 8px rgba(0,0,0,0.2); /* Stronger shadow on hover */ 
   transform: translateY(-2px); /* Slight lift on hover */ 
 }
 
 #newHaikuBtn:focus, #prevHaikuBtn:focus, #buyHaikuBtn:focus { 
   outline: none; /* Remove default outline */ 
-  box-shadow: 0 0 0 3px rgba(108, 117, 125, 0.5); /* Custom focus outline */ 
+  box-shadow: 0 0 0 3px rgba(221, 160, 221, 0.5); /* Custom focus outline */ 
 }
