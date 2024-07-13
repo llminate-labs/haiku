@@ -38,7 +38,7 @@ describe('Function Execution Tests', () => {
     const session = await createCheckoutSession({ httpMethod: 'POST', body: JSON.stringify({ items: [{ id: 'haiku1' }], currency: 'usd' }), headers: { host: 'example.com' } });
     expect(session).toHaveProperty('statusCode', 200);
     const sessionBody = JSON.parse(session.body);
-    expect(sessionBody).toHaveProperty('id');
+    expect(sessionBody).toHaveProperty('id', 'mockSessionId');
   });
 
   it('should handle review submission successfully', async () => {
