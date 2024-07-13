@@ -14,7 +14,7 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Waiting for 200 from the Netlify Preview
-        uses: archiewood/wait-for-netlify-action@v1.0.3
+        uses: rphansen91/wait-for-netlify-action@v1.0.0
         id: wait-for-netflify-preview
         with:
           site_name: "haikugpt"
