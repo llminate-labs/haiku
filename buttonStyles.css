@@ -20,3 +20,17 @@
   outline: none; /* Remove default outline */ 
   box-shadow: 0 0 0 3px rgba(108, 117, 125, 0.5); /* Custom focus outline */ 
 }
+
+#buyHaikuBtn { 
+  background: linear-gradient(135deg, #4caf50, #81c784); /* Vibrant Green with Gradient */ 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Slight shadow */ 
+}
+
+#buyHaikuBtn:hover { 
+  background: linear-gradient(135deg, #43a047, #66bb6a); /* Darker Gradient on Hover */ 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */ 
+}
+
+#buyHaikuBtn:focus { 
+  box-shadow: 0 0 0 3px rgba(67, 160, 71, 0.5); /* Custom focus outline for 'Buy This Haiku' button */ 
+}
