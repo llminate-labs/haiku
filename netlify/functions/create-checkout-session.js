@@ -15,6 +15,9 @@ exports.handler = async (event, context) => {
     const sanitizedItems = items.map(item => ({ id: String(item.id).replace(/[^\w\s]/gi, '') }));
     const sanitizedCurrency = String(currency).replace(/[^a-zA-Z]/g, '');
 
+    console.log('Sanitized Items:', sanitizedItems); // Add logging for debugging
+    console.log('Sanitized Currency:', sanitizedCurrency); // Add logging for debugging
+
     const host = event.headers.host;
     if (!host) {
       throw new Error('Host header is missing');
@@ -36,7 +39,7 @@ exports.handler = async (event, context) => {
       cancel_url: `https://${host}/cancel`
     });
 
-    console.log('Created Checkout Session:', session.id); // Add logging for debugging
+    console.log('Created Checkout Session:', session.id); // Existing logging
 
     return {
       statusCode: 200,

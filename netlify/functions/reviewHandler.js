@@ -19,6 +19,8 @@ exports.handler = async (event, context) => {
 
     if (event.httpMethod === 'POST') {
       const { haikuId, review, rating, userId } = JSON.parse(event.body);
+      console.log('POST Request Body:', { haikuId, review, rating, userId }); // Add logging for debugging
+
       // Verify user purchase
       const purchase = await database.collection('purchases').findOne({ userId, haikuId });
       if (!purchase) {
@@ -30,15 +32,17 @@ exports.handler = async (event, context) => {
 
       // Insert review
       const result = await reviews.insertOne({ haikuId, review, rating, userId, date: new Date() });
-      console.log('Inserted Review:', result.insertedId); // Add logging for debugging
+      console.log('Inserted Review:', result.insertedId); // Existing logging
       return {
         statusCode: 200,
         body: JSON.stringify({ message: 'Review submitted successfully.' })
       };
     } else if (event.httpMethod === 'GET') {
       const { haikuId } = event.queryStringParameters || {};
+      console.log('GET Request Query Parameters:', { haikuId }); // Add logging for debugging
+
       const queryResults = await reviews.find({ haikuId }).toArray();
-      console.log('Retrieved Reviews:', queryResults); // Add logging for debugging
+      console.log('Retrieved Reviews:', queryResults); // Existing logging
       return {
         statusCode: 200,
         body: JSON.stringify(queryResults)
