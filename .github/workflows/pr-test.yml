@@ -14,11 +14,12 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Waiting for 200 from the Netlify Preview
-        uses: rphansen91/wait-for-netlify-action@v1.0.1
-        id: wait-for-netflify-preview
+        uses: rphansen91/wait-for-netlify-action@v1.0.2
+        id: wait-for-netlify-preview
         with:
           site_name: "haikugpt"
+          timeout: 300 # Increased timeout to 300 seconds
       - name: Run Tests
         run: npm test
         env:
-          NETLIFY_PREVIEW_URL: ${{ steps.wait-for-netflify-preview.outputs.url }}
+          NETLIFY_PREVIEW_URL: ${{ steps.wait-for-netlify-preview.outputs.url }}

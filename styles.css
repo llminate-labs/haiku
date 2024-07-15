@@ -1,4 +1,4 @@
-body { font-family: 'Merriweather', serif; text-align: center; color: #2c3e50; height: 100vh; display: flex; align-items: center; justify-content: center; background: none; }
+body { font-family: 'Arial', sans-serif; text-align: center; color: #2c3e50; height: 100vh; display: flex; align-items: center; justify-content: center; background: none; }
 .container { width: 90%; max-width: 1000px; background: rgba(248, 249, 250, 0.8); padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-radius: 20px; margin-top: 20px; transition: background-color 0.3s ease-in-out; }
 #newHaikuBtn, #prevHaikuBtn, #buyHaikuBtn { margin-top: 20px; padding: 15px 35px; font-size: 18px; color: #333; background-color: rgba(52, 152, 219, 0.8); border: none; border-radius: 15px; cursor: pointer; transition: background-color 0.3s; outline: none; }
 #newHaikuBtn:hover, #prevHaikuBtn:hover, #buyHaikuBtn:hover { background-color: rgba(41, 128, 185, 0.8); }
@@ -38,7 +38,7 @@ button:focus { outline: none; box-shadow: 0 0 3pt 2pt rgba(52, 152, 219, 0.8); }
 html[data-theme='spring'] { filter: brightness(1.1); }
 html[data-theme='winter'] { filter: brightness(0.9); }
 html[data-theme='morning'] { filter: saturate(1.2); }
-p { font-size: 18px; margin-bottom: 20px; }
+p { font-size: 12px; line-height: 15px; margin-bottom: 20px; }
 button { border: 2px solid transparent; font-weight: bold; }
 button:hover { border-color: #1abc9c; color: #fff; }
 #haiku { text-shadow: 1px 1px #ffd; }
@@ -57,3 +57,4 @@ button:hover { transform: translateY(-2px); }
 .facebook { background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg'); }
 .twitter { background-image: url('https://upload.wikimedia.org/wikipedia/en/6/60/Twitter_Logo_as_of_2021.svg'); }
 .instagram { background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png'); }
+h1 { font-size: 32px; }
