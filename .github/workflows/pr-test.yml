@@ -18,7 +18,7 @@ jobs:
         id: wait-for-netlify-preview
         with:
           site_name: "haikugpt"
-          max_timeout: 900 # Increased timeout to 900 seconds
+          max_timeout: 300 # Increased timeout to 300 seconds
       - name: Run Tests
         run: npm test
         env:
