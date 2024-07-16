@@ -1,27 +1,47 @@
-#newHaikuBtn, #prevHaikuBtn, #buyHaikuBtn {
-  background-color: #6c757d; /* Subtle Grey */
-  border-radius: 20px;
+/* Japanese Wave Art Theme for Buttons */
+#newHaikuBtn, #prevHaikuBtn {
+  background-color: #1E90FF; /* Dodger Blue */
+  border: 2px solid #1e3d7d; /* Dark Wave Blue */
+  border-radius: 15px; /* Rounded edges */
   box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Soft shadow effect */
   color: #ffffff; /* White text */
-  font-size: 16px; /* Adjust font size */
-  padding: 10px 20px; /* Adjust padding */
-  border: none; /* Remove border */
+  font-size: 18px; /* Larger font size */
+  padding: 12px 25px; /* Adjust padding */
+  font-family: 'Sawarabi Mincho', serif; /* Traditional Japanese-style font */
   cursor: pointer; /* Pointer cursor */
   transition: all 0.3s ease-in-out; /* Smooth transition */
 }
 
-#newHaikuBtn:hover, #prevHaikuBtn:hover, #buyHaikuBtn:hover {
-  background-color: #5a6268; /* Darker Grey on hover */
+#newHaikuBtn:hover, #prevHaikuBtn:hover {
+  background-color: #104E8B; /* Darker Shade of Blue on hover */
+  border-color: #192a4d; /* Darker Wave Border on hover */
   box-shadow: 0 6px 8px rgba(0,0,0,0.2); /* Stronger shadow on hover */
   transform: translateY(-2px); /* Slight lift on hover */
 }
 
-#newHaikuBtn:focus, #prevHaikuBtn:focus, #buyHaikuBtn:focus {
+#newHaikuBtn:focus, #prevHaikuBtn:focus {
   outline: none; /* Remove default outline */
-  box-shadow: 0 0 0 3px rgba(108, 117, 125, 0.5); /* Custom focus outline */
+  box-shadow: 0 0 0 3px rgba(30, 61, 125, 0.5); /* Custom focus outline */
 }
 
-/* Enhancing the 'Buy This Haiku' Button */
+/* Wave Pattern Effects */
+#newHaikuBtn::before, #prevHaikuBtn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('wave-pattern.png') repeat; /* Wave pattern image */
+  opacity: 0.2; /* Light opacity for subtle effect */
+  z-index: -1; /* Behind text */
+  border-radius: 15px; /* Match button edges */
+}
+
+/* Import the new font for traditional Japanese style */
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
+
+/* Enhancing the 'Buy This Haiku' Button - No Changes Required */
 #buyHaikuBtn {
   background-color: #ff6347; /* Vibrant Orange */
   color: #fff; /* White text */
