@@ -1,22 +1,45 @@
-#newHaikuBtn, #prevHaikuBtn, #buyHaikuBtn { 
-  background-color: #6c757d; /* Subtle Grey */ 
-  border-radius: 20px; 
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Soft shadow effect */ 
-  color: #ffffff; /* White text */ 
-  font-size: 16px; /* Adjust font size */ 
-  padding: 10px 20px; /* Adjust padding */ 
-  border: none; /* Remove border */ 
-  cursor: pointer; /* Pointer cursor */ 
-  transition: all 0.3s ease-in-out; /* Smooth transition */ 
+#newHaikuBtn, #prevHaikuBtn, #buyHaikuBtn {
+  background-color: #6c757d; /* Subtle Grey */
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Soft shadow effect */
+  color: #ffffff; /* White text */
+  font-size: 16px; /* Adjust font size */
+  padding: 10px 20px; /* Adjust padding */
+  border: none; /* Remove border */
+  cursor: pointer; /* Pointer cursor */
+  transition: all 0.3s ease-in-out; /* Smooth transition */
 }
 
-#newHaikuBtn:hover, #prevHaikuBtn:hover, #buyHaikuBtn:hover { 
-  background-color: #5a6268; /* Darker Grey on hover */ 
-  box-shadow: 0 6px 8px rgba(0,0,0,0.2); /* Stronger shadow on hover */ 
-  transform: translateY(-2px); /* Slight lift on hover */ 
+#newHaikuBtn:hover, #prevHaikuBtn:hover, #buyHaikuBtn:hover {
+  background-color: #5a6268; /* Darker Grey on hover */
+  box-shadow: 0 6px 8px rgba(0,0,0,0.2); /* Stronger shadow on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
 }
 
-#newHaikuBtn:focus, #prevHaikuBtn:focus, #buyHaikuBtn:focus { 
-  outline: none; /* Remove default outline */ 
-  box-shadow: 0 0 0 3px rgba(108, 117, 125, 0.5); /* Custom focus outline */ 
+#newHaikuBtn:focus, #prevHaikuBtn:focus, #buyHaikuBtn:focus {
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 0 3px rgba(108, 117, 125, 0.5); /* Custom focus outline */
+}
+
+/* Enhancing the 'Buy This Haiku' Button */
+#buyHaikuBtn {
+  background-color: #ff6347; /* Vibrant Orange */
+  color: #fff; /* White text */
+  font-size: 18px; /* Increase font size */
+  padding: 15px 30px; /* Increase padding */
+  border-radius: 25px; /* Larger border radius */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Stronger shadow effect */
+  transition: all 0.4s ease-in-out; /* Smooth transition */
+}
+
+#buyHaikuBtn:hover {
+  background-color: #dc143c; /* Darker Red on hover */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4); /* Stronger shadow on hover */
+  transform: translateY(-3px); /* Slight lift on hover */
+}
+
+#buyHaikuBtn:active {
+  background-color: #c71585; /* Deep Pink on active */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* Slightly subdued shadow on active */
+  transform: translateY(0); /* Remove lift on active */
 }
