@@ -19,6 +19,7 @@ const haikuImages = [
 let currentIndex = 0;
 let autoRotate = true;
 let haikuInterval;
+let hourlyUpdateInterval;
 
 function updateHaiku() {
   document.getElementById('haiku').style.opacity = 0;
@@ -55,9 +56,22 @@ function stopRotation() {
   clearInterval(haikuInterval);
 }
 
+function startHourlyUpdate() {
+  hourlyUpdateInterval = setInterval(function() {
+    incrementHaikuIndex();
+  }, 3600000); // 3600000ms = 1 hour
+}
+
+function stopHourlyUpdate() {
+  clearInterval(hourlyUpdateInterval);
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   updateHaiku();
   if (autoRotate) startRotation();
+  if (typeof haikus !== 'undefined' && haikus.length > 0) {
+    startHourlyUpdate(); // Only start if there are haikus
+  }
   applySeasonalTheme();
 });
 
@@ -74,6 +88,7 @@ document.addEventListener('keydown', function(event) {
 
 function incrementHaikuIndex() {
   stopRotation();
+  stopHourlyUpdate();
   if (currentIndex < haikus.length - 1) {
     currentIndex++;
   } else {
@@ -81,10 +96,12 @@ function incrementHaikuIndex() {
   }
   updateHaiku();
   if (autoRotate) startRotation();
+  startHourlyUpdate(); // Restart hourly update
 }
 
 function decrementHaikuIndex() {
   stopRotation();
+  stopHourlyUpdate();
   if (currentIndex > 0) {
     currentIndex--;
   } else {
@@ -92,6 +109,7 @@ function decrementHaikuIndex() {
   }
   updateHaiku();
   if (autoRotate) startRotation();
+  startHourlyUpdate(); // Restart hourly update
 }
 
 function applySeasonalTheme() {
