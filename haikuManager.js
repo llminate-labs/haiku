@@ -18,6 +18,7 @@ const haikuImages = [
 
 let currentIndex = 0;
 let autoRotate = true;
+let autoRotateInterval;
 let haikuInterval;
 
 function updateHaiku() {
@@ -58,7 +59,9 @@ function stopRotation() {
 document.addEventListener('DOMContentLoaded', function() {
   updateHaiku();
   if (autoRotate) startRotation();
+  startAutoRotateInterval();
   applySeasonalTheme();
+  setInterval(generateNewHaiku, 3600000); // Generate a new haiku every hour
 });
 
 document.getElementById('newHaikuBtn').addEventListener('click', incrementHaikuIndex);
@@ -107,4 +110,10 @@ function applySeasonalTheme() {
     season = 'winter';
   }
   document.documentElement.setAttribute('data-theme', season);
+}
+
+function generateNewHaiku() {
+  // This function can be used to dynamically generate new haikus,
+  // for now, it cycles through existing haikus for the hourly update.
+  incrementHaikuIndex();
 }
