@@ -55,10 +55,17 @@ function stopRotation() {
   clearInterval(haikuInterval);
 }
 
+function autoUpdateHaiku() {
+  setInterval(function() {
+    incrementHaikuIndex();
+  }, 3600000); // 1 hour in milliseconds
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   updateHaiku();
   if (autoRotate) startRotation();
   applySeasonalTheme();
+  autoUpdateHaiku(); // Start the hourly update
 });
 
 document.getElementById('newHaikuBtn').addEventListener('click', incrementHaikuIndex);
