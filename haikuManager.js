@@ -19,6 +19,7 @@ const haikuImages = [
 let currentIndex = 0;
 let autoRotate = true;
 let haikuInterval;
+let hourlyHaikuUpdate;
 
 function updateHaiku() {
   document.getElementById('haiku').style.opacity = 0;
@@ -55,9 +56,16 @@ function stopRotation() {
   clearInterval(haikuInterval);
 }
 
+function startHourlyHaikuUpdate() {
+  hourlyHaikuUpdate = setInterval(function() {
+    incrementHaikuIndex();
+  }, 60 * 60 * 1000); // Every hour
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   updateHaiku();
   if (autoRotate) startRotation();
+  startHourlyHaikuUpdate();
   applySeasonalTheme();
 });
 
