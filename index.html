@@ -4,53 +4,20 @@
   <meta charset='UTF-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <link rel='stylesheet' href='styles.css'>
-  <link rel='stylesheet' href='buttonStyles.css'>
-  <script src='https://js.stripe.com/v3/'></script>
-  <script src='app.js' defer></script>
-  <title>Haiku Home</title>
+  <title>Haiku Slideshow</title>
 </head>
 <body>
-  <div class='container'>
-    <h1 class='title'>Welcome to Our Enhanced Haiku Gallery</h1>
-    <p class='navigation-instructions'>Use ← and → keys or the buttons below to navigate through the haikus, or just wait for the automatic transition.</p>
-    <div class='button-container'>
-      <button id='prevHaikuBtn' role='button' tabindex='0'>Previous Haiku</button>
-      <button id='newHaikuBtn' role='button' tabindex='0'>Next Haiku</button>
-    </div>
-    <div id='haikuContainer' role='region' aria-live='polite'>
-      <p id='haiku' tabindex='0'>Loading Haikus...</p>
-      <button id='buyHaikuBtn' role='button' tabindex='0'>Buy This Haiku</button>
-      <!-- Social Sharing Buttons -->
-      <div class='social-sharing'>
-        <a href='#' class='share-btn facebook' onclick='shareOnFacebook()' aria-label='Share on Facebook'></a>
-        <a href='#' class='share-btn twitter' onclick='shareOnTwitter()' aria-label='Share on Twitter'></a>
-        <a href='#' class='share-btn instagram' onclick='shareOnInstagram()' aria-label='Share on Instagram'></a>
-      </div>
-      <!-- Review Section -->
-      <div id='reviewSection' class='review-section'>
-        <h3>User Reviews</h3>
-        <ul id='reviewList'></ul>
-        <form id='reviewForm'>
-          <textarea id='reviewText' placeholder='Enter your review here...' required></textarea>
-          <div class='rating' aria-label='Rating'>
-             <i class='star' data-value='1'>&#9733;</i>
-             <i class='star' data-value='2'>&#9733;</i>
-             <i class='star' data-value='3'>&#9733;</i>
-             <i class='star' data-value='4'>&#9733;</i>
-             <i class='star' data-value='5'>&#9733;</i>
-          </div>
-          <button type='submit'>Submit Review</button>
-        </form>
-        <div class="recent-reviews">
-          <h4>Recent Reviews</h4>
-          <ul id='recentReviewList'></ul>
-        </div>
+  <div class='slideshow-container'>
+    <div class='haiku-slide fade'>
+      <div class='haiku'>
+        <p>Cherry blossoms fade,<br>Silent under moonlit sky,<br>Spring whispers goodbye.</p>
       </div>
     </div>
+    <!-- Add more haiku slides here -->
+    <a class='prev' onclick='plusSlides(-1)'>&#10094;</a>
+    <a class='next' onclick='plusSlides(1)'>&#10095;</a>
   </div>
-  <script src='haikuManager.js' defer></script>
-  <script src='purchaseManager.js' defer></script>
-  <script src='socialSharing.js' defer></script>
-  <script src='reviewManager.js' defer></script>
+
+  <script src='haikuSlideshow.js' defer></script>
 </body>
 </html>
