@@ -1,15 +1,15 @@
 const haikus = [
-  'Cherry blossoms fade,<br>Silent under moonlit sky,<br>Spring whispers goodbye.',
-  'Winter solitude—<br>a single crow flutters down,<br>snow muffles the land.',
-  'Morning glory blooms,<br>sunrise peeks through whispering leaves,<br>day awakes anew.',
-  'Ocean\'s gentle roar,<br>waves caress the sandy shore,<br>peaceful heart restored.',
-  'Mountains standing tall,<br>clouds caress their snowy peaks,<br>silent giants watch.',
-  'Autumn leaves drift by,<br>crimson, gold, a fiery dance,<br>cool breeze whispers tales.'
+  { text: 'Cherry blossoms fade,<br>Silent under moonlit sky,<br>Spring whispers goodbye.', image: '/images/haiku1.png' },
+  { text: 'Winter solitude—<br>a single crow flutters down,<br>snow muffles the land.', image: '/images/haiku2.png' },
+  { text: 'Morning glory blooms,<br>sunrise peeks through whispering leaves,<br>day awakes anew.', image: '/images/haiku3.png' },
+  { text: 'Ocean\'s gentle roar,<br>waves caress the sandy shore,<br>peaceful heart restored.', image: '/images/haiku4.png' },
+  { text: 'Mountains standing tall,<br>clouds caress their snowy peaks,<br>silent giants watch.', image: '/images/haiku5.png' },
+  { text: 'Autumn leaves drift by,<br>crimson, gold, a fiery dance,<br>cool breeze whispers tales.', image: '/images/haiku6.png' }
 ];
 let currentIndex = 0;
 
 function updateHaiku() {
-  document.getElementById('haiku').innerHTML = haikus[currentIndex];
+  document.getElementById('haiku').innerHTML = `<img src=${haikus[currentIndex].image} alt='Haiku Image'><div>${haikus[currentIndex].text}</div>`;
 }
 
 function incrementHaikuIndex() {
@@ -29,16 +29,3 @@ function decrementHaikuIndex() {
   }
   updateHaiku();
 }
-
-updateHaiku();
-
-document.getElementById('newHaikuBtn').addEventListener('click', incrementHaikuIndex);
-document.getElementById('prevHaikuBtn').addEventListener('click', decrementHaikuIndex);
-document.addEventListener('keydown', function(event) {
-  if (event.key === 'ArrowRight') {
-    incrementHaikuIndex();
-  }
-  if (event.key === 'ArrowLeft') {
-    decrementHaikuIndex();
-  }
-});
