@@ -1,8 +1,65 @@
-body { font-family: 'Arial', sans-serif; text-align: center; height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(to right, #a1c4fd, #c2e9fb); }
-.container { width: 90%; max-width: 1000px; background: rgba(255, 255, 255, 0.8); padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-radius: 20px; margin-top: 20px; }
-.title { font-size: 36px; font-weight: bold; margin-bottom: 20px; }
-#haikuContainer { background-color: rgba(255, 255, 255, 0.75); padding: 20px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-top: 20px; }
-#haiku { font-size: 28px; line-height: 1.6; color: #444; }
-#prevHaikuBtn, #newHaikuBtn { margin-top: 20px; padding: 15px 35px; font-size: 18px; color: #fff; background-color: #1E90FF; border: none; border-radius: 15px; cursor: pointer; transition: background-color 0.3s; outline: none; }
-#prevHaikuBtn:hover, #newHaikuBtn:hover { background-color: #104E8B; }
-.button-container { display: flex; justify-content: space-between; margin-bottom: 20px; }
+body {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('haiku-slideshow-background.png') center/cover;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#haikuContainer {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  margin-top: 20px;
+}
+
+#haiku {
+  font-size: 28px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+#prevHaikuBtn, #nextHaikuBtn, #pauseBtn {
+  padding: 15px 25px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #1E90FF;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  outline: none;
+}
+
+#prevHaikuBtn:hover, #nextHaikuBtn:hover, #pauseBtn:hover {
+  background-color: #104E8B;
+}
+
+#haikuCounter {
+  font-size: 16px;
+}
