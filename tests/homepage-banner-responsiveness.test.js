@@ -1,17 +1,17 @@
-describe('Homepage Banner Responsiveness Tests', () => {
-  it('should display the banner correctly on tablet devices', () => {
-    // Test logic to validate the correct display of the banner on tablets
+describe('Homepage Banner Responsiveness Test Scenarios', () => {
+  it('should display the banner correctly on tablets', () => {
+    // Test scenario for displaying the banner on tablet devices
   });
 
   it('should adjust text and images for tablet view', () => {
-    // Test logic to verify the adjustment of text and images for tablet view
+    // Test scenario for adjusting text and images on tablet view
   });
 
   it('should maintain visual appeal on tablet devices', () => {
-    // Test logic to ensure the visual appeal of the banner on tablets
+    // Test scenario for maintaining visual appeal on tablets
   });
 
-  it('should handle orientation changes on tablet devices', () => {
-    // Test logic to check the handling of orientation changes on tablets
+  it('should handle orientation changes on tablets', () => {
+    // Test scenario for handling orientation changes on tablets
   });
 });
