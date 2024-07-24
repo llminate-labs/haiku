@@ -9,7 +9,7 @@ const haikus = [
 let currentIndex = 0;
 
 function updateHaiku() {
-  document.getElementById('haiku').innerHTML = `<img src=${haikus[currentIndex].image} alt='Haiku Image'><div>${haikus[currentIndex].text}</div>`;
+  document.getElementById('slideshow').innerHTML = `<img src=${haikus[currentIndex].image} alt='Haiku Image'><div>${haikus[currentIndex].text}</div>`;
 }
 
 function incrementHaikuIndex() {
