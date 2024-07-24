@@ -1,0 +1,21 @@
+/* Responsive styles for homepage banner */
+
+/* Desktop view */
+.banner {
+  width: 100%;
+  height: auto;
+}
+
+/* Tablet view */
+@media (max-width: 768px) {
+  .banner {
+    width: 90%;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 576px) {
+  .banner {
+    width: 100%;
+  }
+}
