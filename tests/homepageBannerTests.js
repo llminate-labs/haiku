@@ -1,19 +1,17 @@
-// Automated tests for homepage banner responsiveness
-
-describe('Homepage Banner Responsiveness', () => {
-  it('displays the banner correctly on tablet view', () => {
-    // Test implementation
+describe('Homepage Banner Responsiveness Tests', () => {
+  it('should display the banner correctly on tablet devices', () => {
+    // Test logic to check banner display on tablets
   });
 
-  it('adjusts text and images for tablet screen sizes', () => {
-    // Test implementation
+  it('should adjust text and images for tablet view', () => {
+    // Test logic to verify text and images on tablet view
   });
 
-  it('maintains visual appeal and readability on tablet devices', () => {
-    // Test implementation
+  it('should maintain visual appeal on tablet devices', () => {
+    // Test logic to ensure visual appeal is maintained on tablets
   });
 
-  it('handles orientation changes on tablets', () => {
-    // Test implementation
+  it('should handle orientation changes on tablets', () => {
+    // Test logic to test orientation changes on tablets
   });
 });
