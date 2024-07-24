@@ -9,7 +9,7 @@
 /* Tablet view */
 @media (max-width: 768px) {
   .banner {
-    width: 90%;
+    width: 80%; /* Adjusted width for tablet view */
   }
 }
 
