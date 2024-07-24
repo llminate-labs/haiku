@@ -1,9 +1,20 @@
-# Automated Tests for Homepage Banner Responsiveness
+# Automated Test Scenarios
 
-This branch contains the implementation of automated tests for validating the responsiveness of the homepage banner on tablet devices.
+## Homepage Banner Responsiveness
 
-## Test Scenarios
-- Display the banner correctly on tablet view
-- Adjust text and images for tablet screen sizes
-- Ensure visual appeal and readability on tablet devices
-- Handle orientation changes on tablets
+### Test Scenarios:
+1. Verify that the homepage banner displays correctly on tablet devices.
+2. Ensure the text and images in the banner adjust properly for tablet view.
+3. Validate the visual appeal and readability of the banner on tablet devices.
+4. Test the banner responsiveness to orientation changes on tablets.
+
+---
+
+## File Update Status
+
+Status: In Progress
+
+---
+
+## Pending Tasks
+- Implement automated tests based on the test scenarios.
